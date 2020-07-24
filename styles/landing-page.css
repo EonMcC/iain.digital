@@ -1,0 +1,363 @@
+body {
+  background-color: #333333;
+}
+
+#main-heading {
+  position: absolute;
+  width: 993px;
+  height: 65px;
+  left: 186px;
+  top: 224px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 65px;
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+
+#sub-heading {
+  position: absolute;
+  width: 993px;
+  height: 65px;
+  left: 186px;
+  top: 320px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 65px;
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+
+#arrows-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+#arrows {
+  width: 125px;
+  height: 53px;
+  fill: #496777;
+  padding-bottom: 50px;
+  animation: breath 5s infinite ease-in-out;
+}
+
+@keyframes breath {
+  0% {
+    fill: #496777;
+  }
+  50% {
+    fill: #49677709;
+  }
+  100% {
+    fill: #496777;
+  }
+}
+
+#blob {
+  position: absolute;
+  width: 863px;
+  height: 570px;
+  left: -352px;
+  top: 1635px;
+  background: rgba(87, 138, 165, 0.6);
+  border-radius: 285px;
+}
+
+#about-me {
+  position: absolute;
+  width: 299px;
+  height: 73px;
+  left: 69px;
+  top: 1762px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 86px;
+  /* or 173% */
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+
+#hello {
+  position: absolute;
+  width: 583px;
+  height: 658px;
+  left: 670px;
+  top: 1573px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  /* or 214% */
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+
+#blob-two {
+  position: absolute;
+  width: 863px;
+  height: 570px;
+  left: 787px;
+  top: 2441px;
+
+  background: rgba(87, 138, 165, 0.6);
+  border-radius: 285px;
+}
+
+#i-speak {
+  position: absolute;
+  width: 210px;
+  height: 73px;
+  left: 876px;
+  top: 2682px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 86px;
+  /* or 173% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+
+#english {
+  position: absolute;
+  width: 114px;
+  height: 38px;
+  left: 996px;
+  top: 2360px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+
+#css {
+  position: absolute;
+  width: 117px;
+  height: 72px;
+  left: 876px;
+  top: 2374px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#ruby {
+  position: absolute;
+  width: 111px;
+  height: 73px;
+  left: 716px;
+  top: 2456px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#javascript {
+  position: absolute;
+  width: 162px;
+  height: 152px;
+  left: 623px;
+  top: 2596px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#figma {
+  position: absolute;
+  width: 85px;
+  height: 38px;
+  left: 631px;
+  top: 2798px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#html {
+  position: absolute;
+  width: 85px;
+  height: 38px;
+  left: 700px;
+  top: 2884px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#java {
+  position: absolute;
+  width: 111px;
+  height: 73px;
+  left: 800px;
+  top: 2958px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#german {
+  position: absolute;
+  width: 114px;
+  height: 38px;
+  left: 993px;
+  top: 3017px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 148% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+
+#polaroids {
+  position: absolute;
+  width: 552.83px;
+  height: 591.85px;
+  left: 80px;
+  top: 3232.94px;
+
+  background: url(../images/polaroids.svg) no-repeat;
+  border-radius: 0px;
+  transform: rotate(-8deg);
+}
+#contact {
+  position: absolute;
+  width: 299px;
+  height: 73px;
+  left: 774px;
+  top: 3268px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 86px;
+  /* or 173% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#email {
+  position: absolute;
+  width: 458px;
+  height: 55px;
+  left: 774px;
+  top: 3386px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 55px;
+  /* identical to box height, or 231% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#linkedin {
+  position: absolute;
+  width: 458px;
+  height: 49px;
+  left: 774px;
+  top: 3441px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 55px;
+  /* or 231% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
+#github {
+  position: absolute;
+  width: 458px;
+  height: 49px;
+  left: 774px;
+  top: 3497px;
+
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 55px;
+  /* or 231% */
+
+  letter-spacing: 5px;
+
+  color: #ffffff;
+}
