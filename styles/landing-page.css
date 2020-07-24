@@ -1,5 +1,6 @@
 body {
   background-color: #333333;
+  overflow-x: hidden;
 }
 
 #main-heading {
@@ -44,6 +45,7 @@ body {
   fill: #496777;
   padding-bottom: 50px;
   animation: breath 5s infinite ease-in-out;
+  transition: opacity 5s;
 }
 
 @keyframes breath {
@@ -58,12 +60,101 @@ body {
   }
 }
 
+#projects-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#project-text-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+#project-image-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  padding-top: 50px;
+}
+#project-image-wrapper > * {
+  position: absolute;
+}
+
+#super-trumps {
+  width: 299px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  margin-top: 0;
+}
+#super-trumps-text {
+  width: 302px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+#super-trumps-github {
+  width: 302px;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+#project-background {
+  /* position: absolute; */
+  width: 535px;
+  height: 303px;
+  /* left: 653px;
+  top: 995px; */
+
+  background: #496777;
+  border-radius: 10px;
+  transform: rotate(9.85deg);
+}
+#super-trumps-image {
+  /* position: absolute; */
+  width: 502px;
+  height: 270px;
+  /* left: 653px;
+  top: 995px; */
+
+  background: url(../images/super-trumps.png);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#about-me-section {
+  margin-top: 20%;
+  height: 100vh;
+  background-color: green;
+}
+
 #blob {
   position: absolute;
   width: 863px;
   height: 570px;
   left: -352px;
-  top: 1635px;
+  /* top: 1735px; */
   background: rgba(87, 138, 165, 0.6);
   border-radius: 285px;
 }
@@ -73,7 +164,7 @@ body {
   width: 299px;
   height: 73px;
   left: 69px;
-  top: 1762px;
+  /* top: 1930px; */
   font-family: Avenir LT Std;
   font-style: normal;
   font-weight: normal;
@@ -89,46 +180,44 @@ body {
   width: 583px;
   height: 658px;
   left: 670px;
-  top: 1573px;
+  /* top: 1773px; */
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 30px;
-  /* or 214% */
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: #ffffff;
+}
+
+#languages-section {
+  height: 100vh;
+  background-color: aqua;
 }
 
 #blob-two {
   position: absolute;
   width: 863px;
   height: 570px;
-  left: 787px;
-  top: 2441px;
-
+  right: -200px;
+  /* top: 2441px; */
   background: rgba(87, 138, 165, 0.6);
   border-radius: 285px;
+  overflow-x: hidden;
 }
 
-#i-speak {
+#languages {
   position: absolute;
   width: 210px;
   height: 73px;
-  left: 876px;
-  top: 2682px;
-
+  right: 380px;
+  /* top: 2651px; */
   font-family: Avenir LT Std;
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
   line-height: 86px;
-  /* or 173% */
-
   display: flex;
   align-items: center;
   letter-spacing: 5px;
-
   color: #ffffff;
 }
 
@@ -137,7 +226,7 @@ body {
   width: 114px;
   height: 38px;
   left: 996px;
-  top: 2360px;
+  /* top: 2360px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -152,11 +241,11 @@ body {
 }
 
 #css {
-  position: absolute;
+  /* position: absolute; */
   width: 117px;
   height: 72px;
   left: 876px;
-  top: 2374px;
+  /* top: 2374px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -170,11 +259,11 @@ body {
   color: #ffffff;
 }
 #ruby {
-  position: absolute;
+  /* position: absolute; */
   width: 111px;
   height: 73px;
   left: 716px;
-  top: 2456px;
+  /* top: 2456px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -188,11 +277,11 @@ body {
   color: #ffffff;
 }
 #javascript {
-  position: absolute;
+  /* position: absolute; */
   width: 162px;
   height: 152px;
   left: 623px;
-  top: 2596px;
+  /* top: 2596px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -206,11 +295,11 @@ body {
   color: #ffffff;
 }
 #figma {
-  position: absolute;
+  /* position: absolute; */
   width: 85px;
   height: 38px;
   left: 631px;
-  top: 2798px;
+  /* top: 2798px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -224,11 +313,11 @@ body {
   color: #ffffff;
 }
 #html {
-  position: absolute;
+  /* position: absolute; */
   width: 85px;
   height: 38px;
   left: 700px;
-  top: 2884px;
+  /* top: 2884px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -242,11 +331,11 @@ body {
   color: #ffffff;
 }
 #java {
-  position: absolute;
+  /* position: absolute; */
   width: 111px;
   height: 73px;
   left: 800px;
-  top: 2958px;
+  /* top: 2958px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -260,11 +349,11 @@ body {
   color: #ffffff;
 }
 #german {
-  position: absolute;
+  /* position: absolute; */
   width: 114px;
   height: 38px;
   left: 993px;
-  top: 3017px;
+  /* top: 3017px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -278,23 +367,36 @@ body {
   color: #ffffff;
 }
 
+#contact-section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 #polaroids {
-  position: absolute;
+  /* position: absolute; */
   width: 552.83px;
   height: 591.85px;
   left: 80px;
-  top: 3232.94px;
+  /* top: 3232.94px; */
 
   background: url(../images/polaroids.svg) no-repeat;
   border-radius: 0px;
   transform: rotate(-8deg);
 }
+
+#contact-wrapper {
+  /* position: absolute; */
+  left: 774px;
+}
+
 #contact {
-  position: absolute;
+  /* position: absolute; */
   width: 299px;
   height: 73px;
   left: 774px;
-  top: 3268px;
+  /* top: 3268px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -308,11 +410,11 @@ body {
   color: #ffffff;
 }
 #email {
-  position: absolute;
+  /* position: absolute; */
   width: 458px;
   height: 55px;
   left: 774px;
-  top: 3386px;
+  /* top: 3386px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -326,11 +428,11 @@ body {
   color: #ffffff;
 }
 #linkedin {
-  position: absolute;
+  /* position: absolute; */
   width: 458px;
   height: 49px;
   left: 774px;
-  top: 3441px;
+  /* top: 3441px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
@@ -344,11 +446,11 @@ body {
   color: #ffffff;
 }
 #github {
-  position: absolute;
+  /* position: absolute; */
   width: 458px;
   height: 49px;
   left: 774px;
-  top: 3497px;
+  /* top: 3497px; */
 
   font-family: Avenir LT Std;
   font-style: normal;
