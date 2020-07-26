@@ -16,13 +16,11 @@
 #project-image-wrapper {
   width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-right: 5%;
   padding-top: 50px;
-}
-#project-image-wrapper > * {
-  position: absolute;
 }
 
 #project-heading-text-wrapper {
@@ -51,4 +49,43 @@
   line-height: 30px;
   letter-spacing: 3px;
   color: #ffffff;
+}
+
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  display: absolute;
+  width: 500px;
+}
+#button-wrapper > * {
+  margin: 0 5%;
+  font-family: Avenir LT Std;
+  color: #ffffff;
+  margin-top: 30px;
+  padding: 5px;
+  cursor: pointer;
+  width: 250px;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+#button-wrapper > *:hover {
+  color: #5b8fab;
+}
+
+#next {
+  animation: breath 2s infinite ease-in-out;
+}
+
+@keyframes breath {
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: #5b8fab;
+  }
+  100% {
+    color: #ffffff;
+  }
 }

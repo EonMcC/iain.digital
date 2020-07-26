@@ -109,10 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
       superTrumpsArray.forEach(
         (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
       );
+      // document.getElementById("super-trumps-image").style.display = "relative";
     } else {
       superTrumpsArray.forEach(
         (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
       );
+      // document.getElementById("super-trumps-image").style.display = "absolute";
     }
   }
   function handleCodingLog(option) {
@@ -123,10 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
       codingLogArray.forEach(
         (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
       );
+      // codingLogArray[4].style.display = "relative";
     } else {
       codingLogArray.forEach(
         (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
       );
+      // codingLogArray[4].style.display = "absolute";
     }
   }
   function handlePycp(option) {

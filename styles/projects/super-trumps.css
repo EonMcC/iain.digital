@@ -30,6 +30,7 @@
   background: #496777;
   border-radius: 10px;
   /* transform: rotate(9.85deg); */
+  position: absolute;
 }
 
 #super-trumps-image {
@@ -40,4 +41,5 @@
   box-sizing: border-box;
   border-radius: 10px;
   opacity: 1;
+  /* position: relative; */
 }
