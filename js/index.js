@@ -1,13 +1,47 @@
 const startY = window.pageYOffset;
+const elArray = [1, 2, 3, 4, 5];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("button");
-  button.addEventListener("click", switchFn);
-  function switchFn() {
-    document.getElementById("super-trumps-text").style.cssText =
-      "opacity: 0; transition: all 2s;";
-    document.getElementById("coding-log-text").style.cssText =
-      "opacity: 1; transition: all 2s;";
+  const nextButton = document.getElementById("next");
+  nextButton.addEventListener("click", nextFn);
+  function nextFn() {
+    handleSuperTrumps("hide");
+    handleCodinglog("show");
+  }
+  const previousButton = document.getElementById("previous");
+  previousButton.addEventListener("click", previousFn);
+  function previousFn() {
+    handleSuperTrumps("show");
+    handleCodinglog("hide");
+  }
+
+  function handleSuperTrumps(option) {
+    const superTrumpsArray = document.querySelectorAll(
+      "#super-trumps, #super-trumps-text, #super-trumps-github, #super-trumps-image"
+    );
+    if (option === "show") {
+      superTrumpsArray.forEach(
+        (e) => (e.style.cssText = "opacity: 1; transition: all 2s;")
+      );
+    } else {
+      superTrumpsArray.forEach(
+        (e) => (e.style.cssText = "opacity: 0; transition: all 2s;")
+      );
+    }
+  }
+  function handleCodinglog(option) {
+    const codingLogArray = document.querySelectorAll(
+      "#coding-log, #coding-log-text, #coding-log-github, #coding-log-image"
+    );
+    if (option === "show") {
+      codingLogArray.forEach(
+        (e) => (e.style.cssText = "opacity: 1; transition: all 2s;")
+      );
+    } else {
+      codingLogArray.forEach(
+        (e) => (e.style.cssText = "opacity: 0; transition: all 2s;")
+      );
+    }
   }
 
   const firstEl = document.getElementById("project-background");

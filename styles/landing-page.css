@@ -131,6 +131,18 @@ body {
   color: #ffffff;
   text-decoration: underline;
   margin-top: 30px;
+  opacity: 1;
+}
+#coding-log-github {
+  width: 302px;
+  font-family: Avenir LT Std;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 30px;
+  opacity: 0;
 }
 
 #project-background {
@@ -154,13 +166,20 @@ body {
 #super-trumps-image {
   width: 502px;
   height: 270px;
-  /* left: 653px;
-  top: 995px; */
-
   background: url(../images/super-trumps.png);
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
   box-sizing: border-box;
   border-radius: 10px;
+  opacity: 1;
+}
+#coding-log-image {
+  width: 502px;
+  height: 270px;
+  background: url(../images/coding-log.png) no-repeat;
+  /* border: 1px solid #000000; */
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0;
 }
 
 #about-me-section {
