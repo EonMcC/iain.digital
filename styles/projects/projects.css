@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 #project-image-wrapper {
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10%;
+  margin-right: 5%;
   padding-top: 50px;
 }
 #project-image-wrapper > * {
@@ -36,6 +36,15 @@
 }
 
 #project-sub-text-wrapper {
+  width: 302px;
+  height: 200px;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+#github-wrapper {
   width: 302px;
   height: 200px;
   font-size: 14px;

@@ -1,16 +1,16 @@
-#coding-log {
+#travucket {
   position: absolute;
   width: 299px;
   opacity: 0;
 }
 
-#coding-log-text {
+#travucket-text {
   position: absolute;
   width: 302px;
   opacity: 0;
 }
 
-#coding-log-github {
+#travucket-github {
   position: absolute;
   width: 302px;
   font-size: 14px;
@@ -22,10 +22,10 @@
   opacity: 0;
 }
 
-#coding-log-image {
+#travucket-image {
   width: 502px;
   height: 270px;
-  background: url(../../images/coding-log.png) no-repeat;
+  background: url(../../images/travucket.png) no-repeat;
   box-sizing: border-box;
   border-radius: 10px;
   opacity: 0;

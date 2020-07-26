@@ -1,18 +1,104 @@
 const startY = window.pageYOffset;
-const elArray = [1, 2, 3, 4, 5];
+let moveTo = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.getElementById("next");
   nextButton.addEventListener("click", nextFn);
+
   function nextFn() {
-    handleSuperTrumps("hide");
-    handleCodinglog("show");
+    if (moveTo < 4) {
+      moveTo += 1;
+    } else {
+      moveTo = 0;
+    }
+    switch (moveTo) {
+      case 0:
+        handleSuperTrumps("show");
+        handleCodingLog("hide");
+        handlePycp("hide");
+        handleJPark("hide");
+        handleTravucket("hide");
+        break;
+      case 1:
+        handleSuperTrumps("hide");
+        handleCodingLog("show");
+        handlePycp("hide");
+        handleJPark("hide");
+        handleTravucket("hide");
+        break;
+      case 2:
+        handleSuperTrumps("hide");
+        handleCodingLog("hide");
+        handlePycp("show");
+        handleJPark("hide");
+        handleTravucket("hide");
+        break;
+      case 3:
+        handleSuperTrumps("hide");
+        handleCodingLog("hide");
+        handlePycp("hide");
+        handleJPark("show");
+        handleTravucket("hide");
+        break;
+      case 4:
+        handleSuperTrumps("hide");
+        handleCodingLog("hide");
+        handlePycp("hide");
+        handleJPark("hide");
+        handleTravucket("show");
+        break;
+      default:
+        break;
+    }
   }
   const previousButton = document.getElementById("previous");
   previousButton.addEventListener("click", previousFn);
   function previousFn() {
-    handleSuperTrumps("show");
-    handleCodinglog("hide");
+    if (moveTo > 0) {
+      moveTo -= 1;
+    } else {
+      moveTo = 4;
+    }
+
+    switch (moveTo) {
+      case 0:
+        handleSuperTrumps("show");
+        handleCodingLog("hide");
+        handlePycp("hide");
+        handleJPark("hide");
+        handleTravucket("hide");
+        break;
+      case 1:
+        handleSuperTrumps("hide");
+        handleCodingLog("show");
+        handlePycp("hide");
+        handleJPark("hide");
+        handleTravucket("hide");
+        break;
+      case 2:
+        handleSuperTrumps("hide");
+        handleCodingLog("hide");
+        handlePycp("show");
+        handleJPark("hide");
+        handleTravucket("hide");
+        break;
+      case 3:
+        handleSuperTrumps("hide");
+        handleCodingLog("hide");
+        handlePycp("hide");
+        handleJPark("show");
+        handleTravucket("hide");
+        break;
+      case 4:
+        handleSuperTrumps("hide");
+        handleCodingLog("hide");
+        handlePycp("hide");
+        handleJPark("hide");
+        handleTravucket("show");
+        break;
+      default:
+        break;
+    }
   }
 
   function handleSuperTrumps(option) {
@@ -21,25 +107,67 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (option === "show") {
       superTrumpsArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 2s;")
+        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
       );
     } else {
       superTrumpsArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 2s;")
+        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
       );
     }
   }
-  function handleCodinglog(option) {
+  function handleCodingLog(option) {
     const codingLogArray = document.querySelectorAll(
       "#coding-log, #coding-log-text, #coding-log-github, #coding-log-image"
     );
     if (option === "show") {
       codingLogArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 2s;")
+        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
       );
     } else {
       codingLogArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 2s;")
+        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
+      );
+    }
+  }
+  function handlePycp(option) {
+    const pycpArray = document.querySelectorAll(
+      "#pycp, #pycp-text, #pycp-github, #pycp-image"
+    );
+    if (option === "show") {
+      pycpArray.forEach(
+        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+      );
+    } else {
+      pycpArray.forEach(
+        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
+      );
+    }
+  }
+  function handleJPark(option) {
+    const jParkArray = document.querySelectorAll(
+      "#j-park, #j-park-text, #j-park-github, #j-park-image"
+    );
+    if (option === "show") {
+      jParkArray.forEach(
+        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+      );
+    } else {
+      jParkArray.forEach(
+        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
+      );
+    }
+  }
+  function handleTravucket(option) {
+    const travucketArray = document.querySelectorAll(
+      "#travucket, #travucket-text, #travucket-github, #travucket-image"
+    );
+    if (option === "show") {
+      travucketArray.forEach(
+        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+      );
+    } else {
+      travucketArray.forEach(
+        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
       );
     }
   }

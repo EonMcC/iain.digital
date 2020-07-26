@@ -1,0 +1,21 @@
+#pycp {
+  position: absolute;
+  width: 299px;
+  opacity: 0;
+  font-size: 30px;
+}
+
+#pycp-text {
+  position: absolute;
+  width: 302px;
+  opacity: 0;
+}
+
+#pycp-image {
+  width: 502px;
+  height: 270px;
+  background: url(../../images/pycp.png) no-repeat;
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0;
+}
