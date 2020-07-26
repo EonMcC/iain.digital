@@ -1,0 +1,42 @@
+#super-trumps {
+  position: absolute;
+  width: 299px;
+  opacity: 1;
+}
+
+#super-trumps-text {
+  position: absolute;
+  width: 302px;
+  opacity: 1;
+}
+
+#super-trumps-github {
+  width: 302px;
+  font-family: Avenir LT Std;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 30px;
+  opacity: 1;
+}
+
+#project-background {
+  opacity: 0;
+  width: 535px;
+  height: 303px;
+  background: #496777;
+  border-radius: 10px;
+  /* transform: rotate(9.85deg); */
+}
+
+#super-trumps-image {
+  width: 502px;
+  height: 270px;
+  background: url(../../images/super-trumps.png);
+  /* border: 1px solid #000000; */
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 1;
+}

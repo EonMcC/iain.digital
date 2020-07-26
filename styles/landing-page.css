@@ -58,101 +58,6 @@ body {
   }
 }
 
-#projects-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#project-text-wrapper {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10%;
-}
-
-#project-image-wrapper {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10%;
-  padding-top: 50px;
-}
-#project-image-wrapper > * {
-  position: absolute;
-}
-#project-heading-text-wrapper {
-  width: 299px;
-  height: 200px;
-  font-family: Avenir LT Std;
-  font-size: 50px;
-  line-height: 70px;
-  letter-spacing: 5px;
-  color: #ffffff;
-  margin-top: 0;
-}
-
-#super-trumps {
-  position: absolute;
-  width: 299px;
-  opacity: 1;
-}
-#coding-log {
-  position: absolute;
-  width: 299px;
-  opacity: 0;
-}
-#project-sub-text-wrapper {
-  width: 302px;
-  height: 200px;
-  font-size: 14px;
-  line-height: 30px;
-  letter-spacing: 3px;
-  color: #ffffff;
-}
-#super-trumps-text {
-  position: absolute;
-  width: 302px;
-  opacity: 1;
-}
-#coding-log-text {
-  position: absolute;
-  width: 302px;
-  opacity: 0;
-}
-#super-trumps-github {
-  width: 302px;
-  font-family: Avenir LT Std;
-  font-size: 14px;
-  line-height: 30px;
-  letter-spacing: 3px;
-  color: #ffffff;
-  text-decoration: underline;
-  margin-top: 30px;
-  opacity: 1;
-}
-#coding-log-github {
-  width: 302px;
-  font-family: Avenir LT Std;
-  font-size: 14px;
-  line-height: 30px;
-  letter-spacing: 3px;
-  color: #ffffff;
-  text-decoration: underline;
-  margin-top: 30px;
-  opacity: 0;
-}
-
-#project-background {
-  opacity: 0;
-  width: 535px;
-  height: 303px;
-  background: #496777;
-  border-radius: 10px;
-  /* transform: rotate(9.85deg); */
-}
 #el-to-move {
   z-index: -1;
   position: absolute;
@@ -161,25 +66,6 @@ body {
   background: #496777;
   border-radius: 10px;
   transform: rotate(9.85deg);
-}
-
-#super-trumps-image {
-  width: 502px;
-  height: 270px;
-  background: url(../images/super-trumps.png);
-  /* border: 1px solid #000000; */
-  box-sizing: border-box;
-  border-radius: 10px;
-  opacity: 1;
-}
-#coding-log-image {
-  width: 502px;
-  height: 270px;
-  background: url(../images/coding-log.png) no-repeat;
-  /* border: 1px solid #000000; */
-  box-sizing: border-box;
-  border-radius: 10px;
-  opacity: 0;
 }
 
 #about-me-section {
