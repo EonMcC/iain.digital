@@ -1,6 +1,15 @@
 const startY = window.pageYOffset;
 
 document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("button");
+  button.addEventListener("click", switchFn);
+  function switchFn() {
+    document.getElementById("super-trumps-text").style.cssText =
+      "opacity: 0; transition: all 2s;";
+    document.getElementById("coding-log-text").style.cssText =
+      "opacity: 1; transition: all 2s;";
+  }
+
   const firstEl = document.getElementById("project-background");
   const firstPosX = firstEl.getBoundingClientRect().left;
   const firstPosY = firstEl.getBoundingClientRect().top + pageYOffset;

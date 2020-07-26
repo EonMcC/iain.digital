@@ -83,9 +83,9 @@ body {
 #project-image-wrapper > * {
   position: absolute;
 }
-
-#super-trumps {
+#project-heading-text-wrapper {
   width: 299px;
+  height: 200px;
   font-family: Avenir LT Std;
   font-size: 50px;
   line-height: 70px;
@@ -93,13 +93,34 @@ body {
   color: #ffffff;
   margin-top: 0;
 }
-#super-trumps-text {
+
+#super-trumps {
+  position: absolute;
+  width: 299px;
+  opacity: 1;
+}
+#coding-log {
+  position: absolute;
+  width: 299px;
+  opacity: 0;
+}
+#project-sub-text-wrapper {
   width: 302px;
-  font-family: Avenir LT Std;
+  height: 200px;
   font-size: 14px;
   line-height: 30px;
   letter-spacing: 3px;
   color: #ffffff;
+}
+#super-trumps-text {
+  position: absolute;
+  width: 302px;
+  opacity: 1;
+}
+#coding-log-text {
+  position: absolute;
+  width: 302px;
+  opacity: 0;
 }
 #super-trumps-github {
   width: 302px;
