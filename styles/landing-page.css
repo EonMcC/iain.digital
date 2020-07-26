@@ -25,8 +25,6 @@ body {
   left: 186px;
   top: 320px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 40px;
   line-height: 65px;
   letter-spacing: 5px;
@@ -89,8 +87,6 @@ body {
 #super-trumps {
   width: 299px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 50px;
   line-height: 70px;
   letter-spacing: 5px;
@@ -100,8 +96,6 @@ body {
 #super-trumps-text {
   width: 302px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   letter-spacing: 3px;
@@ -110,8 +104,6 @@ body {
 #super-trumps-github {
   width: 302px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   letter-spacing: 3px;
@@ -139,7 +131,6 @@ body {
 }
 
 #super-trumps-image {
-  /* position: absolute; */
   width: 502px;
   height: 270px;
   /* left: 653px;
@@ -188,14 +179,11 @@ body {
 }
 
 #about-me {
-  /* position: absolute; */
   width: 299px;
   height: 73px;
   /* left: 511px; */
   /* top: 1930px; */
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 50px;
   line-height: 86px;
   /* or 173% */
@@ -208,7 +196,6 @@ body {
 }
 
 #hello {
-  /* position: absolute; */
   width: 583px;
   /* height: 658px; */
   /* left: 670px; */
@@ -224,14 +211,16 @@ body {
 
 #languages-section {
   height: 100vh;
-  background-color: green;
   display: flex;
   align-items: center;
 }
 
 #indv-languages-wrapper {
-  background-color: bisque;
+  padding: 5%;
+  width: 50%;
   display: flex;
+  align-items: flex-end;
+  color: #ffffff;
 }
 
 #indv-languages-wrapper > * {
@@ -241,8 +230,7 @@ body {
 #languages-heading-wrapper {
   display: flex;
   align-items: center;
-  background-color: red;
-  /* width: 500px; */
+  flex-wrap: wrap;
 }
 
 #blob-two {
@@ -251,7 +239,6 @@ body {
   width: 863px;
   height: 570px;
   right: -200px;
-  /* top: 2441px; */
   background: rgba(87, 138, 165, 0.6);
   border-radius: 285px;
   overflow-x: hidden;
@@ -260,167 +247,96 @@ body {
 #languages {
   position: absolute;
   width: 210px;
-  /* height: 73px; */
   right: 380px;
-  /* top: 2651px; */
   font-family: Avenir LT Std;
-  /* font-style: normal; */
-  /* font-weight: normal; */
   font-size: 50px;
   line-height: 86px;
-  /* display: flex; */
-  /* align-items: center; */
   letter-spacing: 5px;
-  /* color: #ffffff; */
   color: #333333;
   align-self: flex-end;
   z-index: 1;
 }
 
 #english {
-  /* position: absolute; */
-  width: 150px;
+  width: 100px;
   height: 38px;
-  left: 996px;
-  /* top: 2360px; */
-
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 35px;
-  /* or 148% */
-
   letter-spacing: 5px;
-
-  color: #ffffff;
 }
 
 #css {
-  /* position: absolute; */
-  width: 150px;
-  height: 72px;
-  left: 876px;
-  /* top: 2374px; */
-
+  width: 100px;
+  height: 200px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 35px;
-  /* or 148% */
-
   letter-spacing: 5px;
+}
 
-  color: #ffffff;
+#ruby-wrapper {
+  width: 75px;
+  height: 100px;
+  font-family: Avenir LT Std;
 }
 #ruby {
-  /* position: absolute; */
-  width: 150px;
-  height: 73px;
-  left: 716px;
-  /* top: 2456px; */
-
-  font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
-  line-height: 35px;
-  /* or 148% */
-
   letter-spacing: 5px;
+  margin: 0;
+}
 
-  color: #ffffff;
+#sub-ruby {
+  font-size: 12px;
+}
+
+#javascript-wrapper {
+  width: 75px;
+  height: 300px;
+  font-family: Avenir LT Std;
 }
 #javascript {
-  /* position: absolute; */
-  width: 150px;
-  height: 152px;
-  left: 623px;
-  /* top: 2596px; */
-
-  font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
-  line-height: 35px;
-  /* or 148% */
-
   letter-spacing: 5px;
+  margin: 0;
+}
 
-  color: #ffffff;
+#sub-javascript {
+  font-size: 12px;
 }
 #figma {
-  /* position: absolute; */
-  width: 150px;
-  height: 38px;
-  left: 631px;
-  /* top: 2798px; */
-
+  width: 100px;
+  height: 10px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 35px;
-  /* or 148% */
-
   letter-spacing: 5px;
-
-  color: #ffffff;
 }
 #html {
-  /* position: absolute; */
-  width: 150px;
-  height: 38px;
-  left: 700px;
-  /* top: 2884px; */
-
+  width: 100px;
+  height: 190px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 35px;
-  /* or 148% */
 
   letter-spacing: 5px;
-
-  color: #ffffff;
 }
 #java {
-  /* position: absolute; */
-  width: 150px;
-  height: 73px;
-  left: 800px;
-  /* top: 2958px; */
-
+  width: 100px;
+  height: 100px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 35px;
-  /* or 148% */
 
   letter-spacing: 5px;
-
-  color: #ffffff;
 }
 #german {
-  /* position: absolute; */
-  width: 150px;
+  width: 100px;
   height: 38px;
-  left: 993px;
-  /* top: 3017px; */
-
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 35px;
-  /* or 148% */
-
   letter-spacing: 5px;
-
-  color: #ffffff;
 }
 
 #contact-section {
@@ -432,19 +348,15 @@ body {
 }
 
 #polaroids {
-  /* position: absolute; */
   width: 552.83px;
   height: 591.85px;
   left: 80px;
-  /* top: 3232.94px; */
-
   background: url(../images/polaroids.svg) no-repeat;
   border-radius: 0px;
   transform: rotate(-8deg);
 }
 
 #contact-wrapper {
-  /* position: absolute; */
   left: 774px;
 }
 
@@ -465,23 +377,18 @@ body {
   height: 73px;
   left: 774px;
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 50px;
   line-height: 86px;
   letter-spacing: 5px;
   color: #333333;
 }
 #email {
-  /* position: absolute; */
   width: 458px;
   height: 55px;
   left: 774px;
   /* top: 3386px; */
 
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 55px;
   /* identical to box height, or 231% */
@@ -491,15 +398,12 @@ body {
   color: #333333;
 }
 #linkedin {
-  /* position: absolute; */
   width: 458px;
   height: 49px;
   left: 774px;
   /* top: 3441px; */
 
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 55px;
   /* or 231% */
@@ -509,15 +413,12 @@ body {
   color: #333333;
 }
 #github {
-  /* position: absolute; */
   width: 458px;
   height: 49px;
   left: 774px;
   /* top: 3497px; */
 
   font-family: Avenir LT Std;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 55px;
   /* or 231% */
