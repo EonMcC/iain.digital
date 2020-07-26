@@ -1,57 +1,82 @@
-var startY = window.pageYOffset;
+const startY = window.pageYOffset;
 
 document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("scroll", readyZeroMove);
+  const firstEl = document.getElementById("project-background");
+  const firstPosX = firstEl.getBoundingClientRect().left;
+  const firstPosY = firstEl.getBoundingClientRect().top + pageYOffset;
+
+  const elToMove = document.getElementById("el-to-move");
+  elToMove.style.cssText = `left: ${firstPosX}px; top: ${firstPosY}px;`;
+
+  const secondEl = document.getElementById("blob");
+  const secondPosX = secondEl.getBoundingClientRect().left;
+  const secondPosY = secondEl.getBoundingClientRect().top + pageYOffset;
+
+  const thirdEl = document.getElementById("blob-two");
+  const thirdPosX = thirdEl.getBoundingClientRect().left;
+  const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
+
+  const fourthEl = document.getElementById("contact-blob");
+  const fourthPosX = fourthEl.getBoundingClientRect().left;
+  const fourthPosY = fourthEl.getBoundingClientRect().top + 50 + pageYOffset;
+
   window.addEventListener("scroll", readyFirstMove);
   window.addEventListener("scroll", readySecondMove);
+  window.addEventListener("scroll", readyThirdMove);
 
-  let projectBackground = document.getElementById("project-background");
-  let movingBlob = document.getElementById("blob-one");
-  let blob = document.getElementById("blob");
-
-  const zeroTrigger = document.getElementById("super-trumps");
-  const zeroTriggerPos = zeroTrigger.getBoundingClientRect().top;
-
-  function readyZeroMove() {
-    if (pageYOffset > zeroTriggerPos) {
-      window.removeEventListener("scroll", readyZeroMove);
-      window.addEventListener("scroll", reverseReadyZeroMove);
-      zeroMove(projectBackground);
-    }
-  }
-  function reverseReadyZeroMove() {
-    if (pageYOffset < zeroTriggerPos) {
-      window.removeEventListener("scroll", reverseReadyZeroMove);
-      window.addEventListener("scroll", readyZeroMove);
-      reverseZeroMove(projectBackground);
-    }
-  }
-
-  const firstTrigger = document.getElementById("super-trumps-text");
+  const firstTrigger = document.getElementById("super-trumps");
   const firstTriggerPos = firstTrigger.getBoundingClientRect().top;
 
   function readyFirstMove() {
     if (pageYOffset > firstTriggerPos) {
       window.removeEventListener("scroll", readyFirstMove);
       window.addEventListener("scroll", reverseReadyFirstMove);
-      firstMove(movingBlob);
+      firstMove(elToMove, secondPosX, secondPosY);
     }
   }
   function reverseReadyFirstMove() {
     if (pageYOffset < firstTriggerPos) {
       window.removeEventListener("scroll", reverseReadyFirstMove);
       window.addEventListener("scroll", readyFirstMove);
-      reverseFirstMove(movingBlob);
+      reverseFirstMove(elToMove, firstPosX, firstPosY);
     }
   }
 
-  const secondTrigger = document.getElementById("third-break-point");
+  const secondTrigger = document.getElementById("second-break-point");
   const secondTriggerPos = secondTrigger.getBoundingClientRect().top;
 
   function readySecondMove() {
     if (pageYOffset > secondTriggerPos) {
       window.removeEventListener("scroll", readySecondMove);
-      secondMove(blob);
+      window.addEventListener("scroll", reverseReadySecondMove);
+      secondMove(elToMove, thirdPosX, thirdPosY);
+    }
+  }
+
+  function reverseReadySecondMove() {
+    if (pageYOffset < secondTriggerPos) {
+      window.removeEventListener("scroll", reverseReadySecondMove);
+      window.addEventListener("scroll", readySecondMove);
+      reverseSecondMove(elToMove, secondPosX, secondPosY);
+    }
+  }
+
+  const thirdTrigger = document.getElementById("languages");
+  const thirdTriggerPos = thirdTrigger.getBoundingClientRect().top;
+
+  function readyThirdMove() {
+    if (pageYOffset > thirdTriggerPos) {
+      window.removeEventListener("scroll", readyThirdMove);
+      window.addEventListener("scroll", reverseReadyThirdMove);
+      thirdMove(elToMove, fourthPosX, fourthPosY);
+    }
+  }
+
+  function reverseReadyThirdMove() {
+    if (pageYOffset < thirdTriggerPos) {
+      window.removeEventListener("scroll", reverseReadyThirdMove);
+      window.addEventListener("scroll", readyThirdMove);
+      reverseSecondMove(elToMove, thirdPosX, thirdPosY);
     }
   }
 });
@@ -73,31 +98,60 @@ function getOffset(el) {
   };
 }
 
-function zeroMove(elToMove) {
-  elToMove.style.cssText =
-    "transform: translate(1000px); transition: transform 2s";
+function firstMove(elToMove, x, y) {
+  elToMove.style.cssText = `
+    left: ${x}px;
+    top: ${y}px;
+    width: 863px;
+    height: 570px;
+    border-radius: 285px;
+    transform: rotate(0);
+    transition: all 1.5s`;
 }
-function reverseZeroMove(elToMove) {
-  elToMove.style.cssText =
-    "transform: translate(0), rotate(-8deg); transition: transform 2s;";
-}
-
-function firstMove(elToMove) {
-  elToMove.style.cssText = `width: 863px; height: 570px; background: rgba(87, 138, 165, 0.6);  border-radius: 285px; transition: all 2s; transform: translate(578px);`;
-}
-function reverseFirstMove(elToMove) {
-  elToMove.style.cssText = `width: 863px; height: 570px; background: rgba(87, 138, 165, 0.6);  border-radius: 285px; transition: all 2s; transform: translate(-578px);`;
+function reverseFirstMove(elToMove, x, y) {
+  elToMove.style.cssText = `left: ${x}px; top: ${y}px; transition: all 1.5s`;
 }
 
-function secondMove(elToMove) {
-  const endPos = document.getElementById("blob-two");
-  const start = getOffset(elToMove);
-  const end = getOffset(endPos);
-  console.log(start.left - start.left);
-  const xTrans = start.left - start.left - start.left + end.left;
-  const yTrans = end.top - start.top;
-  console.log(xTrans, yTrans);
-  document.getElementById("blob-one").style.cssText =
-    "transition-duration: background 0s; background:none;";
-  elToMove.style.cssText = `opacity: 1; transition: transform 2s; transform: translate(${xTrans}px, ${yTrans}px);`;
+function secondMove(elToMove, x, y) {
+  elToMove.style.cssText = `
+    left: ${x}px;
+    top: ${y}px;
+    width: 863px;
+    height: 570px;
+    border-radius: 285px;
+    transform: rotate(0);
+    transition: all 1.5s`;
+}
+
+function reverseSecondMove(elToMove, x, y) {
+  elToMove.style.cssText = `
+  left: ${x}px;
+  top: ${y}px;
+  width: 863px;
+  height: 570px;
+  border-radius: 285px;
+  transform: rotate(0);
+  transition: all 1.5s`;
+}
+
+function thirdMove(elToMove, x, y) {
+  elToMove.style.cssText = `
+    left: ${x}px;
+    top: ${y}px;
+    width: 863px;
+    height: 570px;
+    border-radius: 285px;
+    transition: all 1.5s;
+    transform: rotate(45deg);
+   `;
+}
+
+function reverseThirdMove(elToMove, x, y) {
+  elToMove.style.cssText = `
+  left: ${x}px;
+  top: ${y}px;
+  width: 863px;
+  height: 570px;
+  border-radius: 285px;
+  transition: all 1.5s`;
 }
