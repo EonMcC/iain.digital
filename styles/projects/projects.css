@@ -75,10 +75,10 @@
 }
 
 #next {
-  animation: breath 2s infinite ease-in-out;
+  animation: breath-next 2s infinite ease-in-out;
 }
 
-@keyframes breath {
+@keyframes breath-next {
   0% {
     color: #ffffff;
   }

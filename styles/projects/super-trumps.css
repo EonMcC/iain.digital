@@ -21,6 +21,7 @@
   text-decoration: underline;
   margin-top: 30px;
   opacity: 1;
+  z-index: 10;
 }
 
 #project-background {
@@ -41,5 +42,5 @@
   box-sizing: border-box;
   border-radius: 10px;
   opacity: 1;
-  /* position: relative; */
+  position: relative;
 }

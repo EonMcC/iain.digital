@@ -1,0 +1,129 @@
+#languages-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#indv-languages-wrapper {
+  padding: 5%;
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+#indv-languages-wrapper > * {
+  text-align: center;
+}
+
+#languages-heading-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#blob-two {
+  opacity: 0;
+  position: absolute;
+  width: 863px;
+  height: 570px;
+  right: -200px;
+  background: rgba(87, 138, 165, 0.6);
+  border-radius: 285px;
+  overflow-x: hidden;
+}
+
+#languages {
+  position: absolute;
+  width: 210px;
+  right: 380px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 86px;
+  letter-spacing: 5px;
+  color: #333333;
+  align-self: flex-end;
+  z-index: 1;
+}
+
+#english {
+  width: 100px;
+  height: 38px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 35px;
+  letter-spacing: 5px;
+}
+
+#css {
+  width: 100px;
+  height: 450px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 35px;
+  letter-spacing: 5px;
+}
+
+#ruby-wrapper {
+  width: 250px;
+  height: 100px;
+  font-family: Avenir LT Std;
+}
+#ruby {
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+#sub-ruby {
+  font-size: 12px;
+}
+
+#javascript-wrapper {
+  width: 75px;
+  height: 500px;
+  font-family: Avenir LT Std;
+}
+#javascript {
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+#sub-javascript {
+  font-size: 12px;
+}
+#figma {
+  width: 200px;
+  height: 10px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 35px;
+  letter-spacing: 5px;
+}
+#html {
+  width: 150px;
+  height: 190px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 35px;
+
+  letter-spacing: 5px;
+}
+#java {
+  width: 100px;
+  height: 80px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 35px;
+
+  letter-spacing: 5px;
+}
+#german {
+  width: 100px;
+  height: 38px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 35px;
+  letter-spacing: 5px;
+}

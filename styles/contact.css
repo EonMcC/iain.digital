@@ -1,0 +1,92 @@
+#contact-section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+#polaroids {
+  width: 552.83px;
+  height: 591.85px;
+  left: 80px;
+  background: url(../images/polaroids.svg) no-repeat;
+  border-radius: 0px;
+  transform: rotate(-8deg);
+}
+
+#contact-wrapper {
+}
+
+/* #contact-blob {
+  opacity: 1;
+  position: absolute;
+  width: 863px;
+  height: 570px;
+  right: -150px;
+  background: rgba(87, 138, 165, 0.6);
+  border-radius: 285px;
+  overflow: hidden;
+  z-index: -1;
+  transform: rotate(45deg);
+} */
+
+#contact {
+  width: 299px;
+  height: 73px;
+  left: 774px;
+  font-family: Avenir LT Std;
+  font-size: 50px;
+  line-height: 86px;
+  letter-spacing: 5px;
+  color: #333333;
+}
+#email {
+  width: 458px;
+  height: 55px;
+  left: 774px;
+  /* top: 3386px; */
+
+  font-family: Avenir LT Std;
+  font-size: 24px;
+  line-height: 55px;
+  /* identical to box height, or 231% */
+
+  letter-spacing: 5px;
+
+  color: #333333;
+  z-index: 10;
+  cursor: pointer;
+}
+#linkedin {
+  width: 458px;
+  height: 49px;
+  left: 774px;
+  /* top: 3441px; */
+
+  font-family: Avenir LT Std;
+  font-size: 24px;
+  line-height: 55px;
+  /* or 231% */
+
+  letter-spacing: 5px;
+
+  color: #333333;
+  z-index: 10;
+}
+#github {
+  width: 458px;
+  height: 49px;
+  left: 774px;
+  /* top: 3497px; */
+
+  font-family: Avenir LT Std;
+  font-size: 24px;
+  line-height: 55px;
+  /* or 231% */
+
+  letter-spacing: 5px;
+
+  color: #333333;
+  z-index: 10;
+}

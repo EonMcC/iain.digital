@@ -107,14 +107,17 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (option === "show") {
       superTrumpsArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+        (e) =>
+          (e.style.cssText =
+            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
       );
-      // document.getElementById("super-trumps-image").style.display = "relative";
+      document.getElementById("super-trumps-image").style.position = "relative";
     } else {
       superTrumpsArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
+        (e) => (e.style.cssText = "opacity: 0; z-index: 0;")
       );
-      // document.getElementById("super-trumps-image").style.display = "absolute";
+      document.getElementById("super-trumps-image").style.cssText =
+        "opacity: 0; position: absolute;";
     }
   }
   function handleCodingLog(option) {
@@ -123,14 +126,17 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (option === "show") {
       codingLogArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+        (e) =>
+          (e.style.cssText =
+            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
       );
-      // codingLogArray[4].style.display = "relative";
+      document.getElementById("coding-log-image").style.position = "relative";
     } else {
       codingLogArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
+        (e) => (e.style.cssText = "opacity: 0; z-index: 0;")
       );
-      // codingLogArray[4].style.display = "absolute";
+      document.getElementById("coding-log-image").style.cssText =
+        "opacity: 0; position: absolute;";
     }
   }
   function handlePycp(option) {
@@ -139,12 +145,15 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (option === "show") {
       pycpArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+        (e) =>
+          (e.style.cssText =
+            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
       );
+      document.getElementById("pycp-image").style.position = "relative";
     } else {
-      pycpArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
-      );
+      pycpArray.forEach((e) => (e.style.cssText = "opacity: 0; z-index: 0;"));
+      document.getElementById("pycp-image").style.cssText =
+        "opacity: 0; position: absolute;";
     }
   }
   function handleJPark(option) {
@@ -153,12 +162,15 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (option === "show") {
       jParkArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+        (e) =>
+          (e.style.cssText =
+            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
       );
+      document.getElementById("j-park-image").style.position = "relative";
     } else {
-      jParkArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
-      );
+      jParkArray.forEach((e) => (e.style.cssText = "opacity: 0; z-index: 0;"));
+      document.getElementById("j-park-image").style.cssText =
+        "opacity: 0; position: absolute;";
     }
   }
   function handleTravucket(option) {
@@ -167,12 +179,17 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (option === "show") {
       travucketArray.forEach(
-        (e) => (e.style.cssText = "opacity: 1; transition: all 1.5s;")
+        (e) =>
+          (e.style.cssText =
+            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
       );
+      document.getElementById("travucket-image").style.position = "relative";
     } else {
       travucketArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; transition: all 1.5s;")
+        (e) => (e.style.cssText = "opacity: 0; z-index: 0;")
       );
+      document.getElementById("travucket-image").style.cssText =
+        "opacity: 0; position: absolute;";
     }
   }
 
@@ -191,8 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const thirdPosX = thirdEl.getBoundingClientRect().left;
   const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
-  const fourthEl = document.getElementById("contact-blob");
-  const fourthPosX = fourthEl.getBoundingClientRect().left;
+  const fourthEl = document.getElementById("contact-wrapper");
+  const fourthPosX = fourthEl.getBoundingClientRect().left - 100;
   const fourthPosY = fourthEl.getBoundingClientRect().top + 50 + pageYOffset;
 
   window.addEventListener("scroll", readyFirstMove);
