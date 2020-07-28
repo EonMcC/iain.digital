@@ -19,30 +19,16 @@
 #languages-heading-wrapper {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-#blob-two {
-  opacity: 0;
-  position: absolute;
-  width: 863px;
-  height: 570px;
-  right: -200px;
-  background: rgba(87, 138, 165, 0.6);
-  border-radius: 285px;
-  overflow-x: hidden;
+  height: 100vh;
 }
 
 #languages {
-  position: absolute;
-  width: 210px;
-  right: 380px;
   font-family: Avenir LT Std;
   font-size: 50px;
-  line-height: 86px;
-  letter-spacing: 5px;
   color: #333333;
-  align-self: flex-end;
+  line-height: 570px;
+  letter-spacing: 5px;
+  padding-left: 30px;
   z-index: 1;
 }
 

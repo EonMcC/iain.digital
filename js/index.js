@@ -204,13 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondPosX = secondEl.getBoundingClientRect().left;
   const secondPosY = secondEl.getBoundingClientRect().top + pageYOffset;
 
-  const thirdEl = document.getElementById("blob-two");
+  const thirdEl = document.getElementById("languages");
   const thirdPosX = thirdEl.getBoundingClientRect().left;
   const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
-  const fourthEl = document.getElementById("contact-wrapper");
+  const fourthEl = document.getElementById("contact-details-container");
   const fourthPosX = fourthEl.getBoundingClientRect().left - 100;
-  const fourthPosY = fourthEl.getBoundingClientRect().top + 50 + pageYOffset;
+  const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset;
 
   window.addEventListener("scroll", readyFirstMove);
   window.addEventListener("scroll", readySecondMove);
@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const thirdTrigger = document.getElementById("languages");
-  const thirdTriggerPos = thirdTrigger.getBoundingClientRect().top;
+  const thirdTriggerPos = thirdTrigger.getBoundingClientRect().top + 285;
 
   function readyThirdMove() {
     if (pageYOffset > thirdTriggerPos) {
