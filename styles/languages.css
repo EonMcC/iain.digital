@@ -26,3 +26,49 @@
   padding-left: 30px;
   z-index: 1;
 }
+
+#javascript {
+  animation: accumulator 5s 0s infinite alternate;
+}
+#angular {
+  animation: accumulator 5s 0.5s infinite alternate;
+}
+#sinatra {
+  animation: accumulator 5s 1s infinite alternate;
+}
+#figma {
+  animation: accumulator 5s 1.5s infinite alternate;
+}
+#ruby {
+  animation: accumulator 5s 2s infinite alternate;
+}
+#css {
+  animation: accumulator 5s 2.5s infinite alternate;
+}
+#html {
+  animation: accumulator 5s 3s infinite alternate;
+}
+#java {
+  animation: accumulator 5s 3.5s infinite alternate;
+}
+#react {
+  animation: accumulator 5s 4s infinite alternate;
+}
+#english {
+  animation: accumulator 5s 4.5s infinite alternate;
+}
+#german {
+  animation: accumulator 5s 5s infinite alternate;
+}
+
+@keyframes accumulator {
+  0% {
+    fill: #496777;
+  }
+  50% {
+    fill: #78a9c3;
+  }
+  100% {
+    fill: white;
+  }
+}
