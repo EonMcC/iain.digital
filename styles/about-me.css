@@ -37,29 +37,21 @@
 #about-me {
   width: 299px;
   height: 73px;
-  /* left: 511px; */
-  /* top: 1930px; */
-  font-family: Avenir LT Std;
-  font-size: 50px;
+  font-family: Avenir;
+  font-size: 55px;
   line-height: 86px;
-  /* or 173% */
   letter-spacing: 5px;
-  /* color: #ffffff; */
   color: #333333;
   margin-left: 212px;
-  /* display: inline; */
   z-index: 1;
 }
 
 #hello {
   width: 583px;
-  /* height: 658px; */
-  /* left: 670px; */
-  /* top: 1773px; */
-  font-family: Avenir LT Std;
+  font-family: Avenir;
   font-size: 14px;
   line-height: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #ffffff;
   align-self: center;
   margin-left: 200px;

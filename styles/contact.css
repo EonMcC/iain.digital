@@ -9,10 +9,8 @@
 
 #polaroids {
   width: 552.83px;
-  height: 591.85px;
-  left: 80px;
+  height: 491.85px;
   background: url(../images/polaroids.svg) no-repeat;
-  border-radius: 0px;
   transform: rotate(-8deg);
 }
 
@@ -29,7 +27,7 @@
 }
 
 .contact-details * {
-  font-family: Avenir LT Std;
+  font-family: Avenir;
   font-size: 24px;
   letter-spacing: 5px;
   color: #333333;

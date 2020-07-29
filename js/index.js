@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondPosY = secondEl.getBoundingClientRect().top + pageYOffset;
 
   const thirdEl = document.getElementById("languages");
-  const thirdPosX = thirdEl.getBoundingClientRect().left;
+  const thirdPosX = thirdEl.getBoundingClientRect().left - 120;
   const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
   const fourthEl = document.getElementById("contact-details-container");
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pageYOffset < thirdTriggerPos) {
       window.removeEventListener("scroll", reverseReadyThirdMove);
       window.addEventListener("scroll", readyThirdMove);
-      reverseSecondMove(elToMove, thirdPosX, thirdPosY);
+      reverseThirdMove(elToMove, thirdPosX, thirdPosY);
     }
   }
 });
@@ -298,7 +298,8 @@ function firstMove(elToMove, x, y) {
     height: 570px;
     border-radius: 285px;
     transform: rotate(0);
-    transition: all 1.5s`;
+    animation: first-circle-transition 1s;
+    transition: all 2s`;
 }
 function reverseFirstMove(elToMove, x, y) {
   elToMove.style.cssText = `left: ${x}px; top: ${y}px; transition: all 1.5s`;
@@ -308,10 +309,11 @@ function secondMove(elToMove, x, y) {
   elToMove.style.cssText = `
     left: ${x}px;
     top: ${y}px;
-    width: 863px;
+    width: 1500px;
     height: 570px;
-    border-radius: 285px;
+    border-radius: 0;
     transform: rotate(0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
     transition: all 1.5s`;
 }
 
@@ -323,6 +325,7 @@ function reverseSecondMove(elToMove, x, y) {
   height: 570px;
   border-radius: 285px;
   transform: rotate(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   transition: all 1.5s`;
 }
 
@@ -335,6 +338,7 @@ function thirdMove(elToMove, x, y) {
     border-radius: 285px;
     transition: all 1.5s;
     transform: rotate(45deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
    `;
 }
 
@@ -342,8 +346,10 @@ function reverseThirdMove(elToMove, x, y) {
   elToMove.style.cssText = `
   left: ${x}px;
   top: ${y}px;
-  width: 863px;
+  width: 1500px;
   height: 570px;
-  border-radius: 285px;
+  border-radius: 0;
+  transform: rotate(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
   transition: all 1.5s`;
 }

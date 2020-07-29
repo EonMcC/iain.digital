@@ -9,7 +9,7 @@ body {
   height: 65px;
   left: 186px;
   top: 224px;
-  font-family: Avenir LT Std;
+  font-family: Avenir;
   font-style: normal;
   font-weight: 500;
   font-size: 72px;
@@ -24,7 +24,7 @@ body {
   height: 65px;
   left: 186px;
   top: 320px;
-  font-family: Avenir LT Std;
+  font-family: Avenir;
   font-size: 40px;
   line-height: 65px;
   letter-spacing: 5px;
@@ -66,4 +66,25 @@ body {
   background: #496777;
   border-radius: 10px;
   transform: rotate(9.85deg);
+  box-shadow: 5px 5px 10px 0px #1b262c;
+}
+
+@keyframes first-circle-transition {
+  0% {
+    width: 535px;
+    height: 303px;
+    border-radius: 10px;
+    background: #496777;
+    box-shadow: 10px 10px 10px 0px #1b262c;
+  }
+  50% {
+    box-shadow: 20px 20px 10px 5px #1b262c;
+  }
+  100% {
+    width: 863px;
+    height: 570px;
+    border-radius: 285px;
+    background: #496777;
+    box-shadow: 5px 5px 10px 0px #1b262c;
+  }
 }

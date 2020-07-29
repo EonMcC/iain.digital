@@ -1,7 +1,7 @@
 #projects-wrapper {
   display: flex;
   justify-content: space-evenly;
-  font-family: Avenir LT Std;
+  font-family: Avenir;
 }
 
 #project-text-wrapper {
@@ -60,7 +60,7 @@
 }
 #button-wrapper > * {
   margin: 0 5%;
-  font-family: Avenir LT Std;
+  font-family: Avenir;
   color: #ffffff;
   margin-top: 30px;
   padding: 5px;
