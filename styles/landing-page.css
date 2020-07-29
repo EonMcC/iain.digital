@@ -1,6 +1,8 @@
 body {
   background-color: #333333;
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 #main-heading {
@@ -67,6 +69,7 @@ body {
   border-radius: 10px;
   transform: rotate(9.85deg);
   box-shadow: 5px 5px 10px 0px #1b262c;
+  border: solid 1px black;
 }
 
 @keyframes first-circle-transition {
@@ -87,4 +90,10 @@ body {
     background: #496777;
     box-shadow: 5px 5px 10px 0px #1b262c;
   }
+}
+
+footer {
+  background-color: #333333;
+  height: 300px;
+  border-top: solid 2px black;
 }

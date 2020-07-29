@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   elToMove.style.cssText = `left: ${firstPosX}px; top: ${firstPosY}px;`;
 
   const secondEl = document.getElementById("blob");
-  const secondPosX = secondEl.getBoundingClientRect().left;
+  const secondPosX = secondEl.getBoundingClientRect().left + 25;
   const secondPosY = secondEl.getBoundingClientRect().top + pageYOffset;
 
   const thirdEl = document.getElementById("languages");
@@ -307,14 +307,13 @@ function reverseFirstMove(elToMove, x, y) {
 
 function secondMove(elToMove, x, y) {
   elToMove.style.cssText = `
-    left: ${x}px;
-    top: ${y}px;
-    width: 1500px;
-    height: 570px;
-    border-radius: 0;
-    transform: rotate(0);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
-    transition: all 1.5s`;
+  left: ${x}px;
+  top: ${y}px;
+  width: 863px;
+  height: 570px;
+  border-radius: 285px;
+  transform: rotate(0);
+  transition: all 2s`;
 }
 
 function reverseSecondMove(elToMove, x, y) {
@@ -325,7 +324,6 @@ function reverseSecondMove(elToMove, x, y) {
   height: 570px;
   border-radius: 285px;
   transform: rotate(0);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   transition: all 1.5s`;
 }
 
@@ -338,7 +336,6 @@ function thirdMove(elToMove, x, y) {
     border-radius: 285px;
     transition: all 1.5s;
     transform: rotate(45deg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
    `;
 }
 
@@ -346,10 +343,10 @@ function reverseThirdMove(elToMove, x, y) {
   elToMove.style.cssText = `
   left: ${x}px;
   top: ${y}px;
-  width: 1500px;
+  width: 863px;
   height: 570px;
-  border-radius: 0;
+  border-radius: 285px;
   transform: rotate(0);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
-  transition: all 1.5s`;
+  animation: first-circle-transition 1s;
+  transition: all 2s`;
 }

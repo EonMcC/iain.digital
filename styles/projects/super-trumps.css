@@ -37,8 +37,8 @@
 #super-trumps-image {
   width: 502px;
   height: 270px;
-  background: url(../../images/super-trumps.png);
-  /* border: 1px solid #000000; */
+  background: url(../../images/super-trumps.png) no-repeat center;
+  background-size: cover;
   box-sizing: border-box;
   border-radius: 10px;
   opacity: 1;
