@@ -1,5 +1,11 @@
+:root {
+  --main: #496777;
+  --dark: #333333;
+  --light: white;
+}
+
 body {
-  background-color: #333333;
+  background-color: var(--dark);
   overflow-x: hidden;
   padding: 0;
   margin: 0;
@@ -17,7 +23,7 @@ body {
   font-size: 72px;
   line-height: 65px;
   letter-spacing: 5px;
-  color: #ffffff;
+  color: var(--light);
 }
 
 #sub-heading {
@@ -30,7 +36,7 @@ body {
   font-size: 40px;
   line-height: 65px;
   letter-spacing: 5px;
-  color: #ffffff;
+  color: var(--light);
 }
 
 #arrows-container {
@@ -42,7 +48,7 @@ body {
 #arrows {
   width: 125px;
   height: 53px;
-  fill: #496777;
+  fill: var(--main);
   padding-bottom: 50px;
   animation: breath 3s infinite ease-in-out;
   transition: opacity 3s;
@@ -50,13 +56,13 @@ body {
 
 @keyframes breath {
   0% {
-    fill: #496777;
+    fill: var(--main);
   }
   50% {
     fill: #49677709;
   }
   100% {
-    fill: #496777;
+    fill: var(--main);
   }
 }
 
@@ -65,35 +71,15 @@ body {
   position: absolute;
   width: 535px;
   height: 303px;
-  background: #496777;
+  background: var(--main);
   border-radius: 10px;
   transform: rotate(9.85deg);
   box-shadow: 5px 5px 10px 0px #1b262c;
   border: solid 1px black;
 }
 
-@keyframes first-circle-transition {
-  0% {
-    width: 535px;
-    height: 303px;
-    border-radius: 10px;
-    background: #496777;
-    box-shadow: 10px 10px 10px 0px #1b262c;
-  }
-  50% {
-    box-shadow: 20px 20px 10px 5px #1b262c;
-  }
-  100% {
-    width: 863px;
-    height: 570px;
-    border-radius: 285px;
-    background: #496777;
-    box-shadow: 5px 5px 10px 0px #1b262c;
-  }
-}
-
 footer {
-  background-color: #333333;
+  background-color: var(--dark);
   height: 300px;
   border-top: solid 2px black;
 }
