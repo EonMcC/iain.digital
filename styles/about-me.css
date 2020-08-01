@@ -2,14 +2,11 @@
   display: flex;
   margin-top: 5%;
   height: 100vh;
-  /* background-color: green; */
 }
 
 #about-me-heading-wrapper {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* background-color: yellow; */
 }
 
 #blob-one {
@@ -19,7 +16,6 @@
   left: -863px;
   background: rgba(87, 138, 165, 0.6);
   border-radius: 285px;
-  /* background-color: green; */
 }
 
 #blob {
@@ -34,14 +30,13 @@
 
 #about-me {
   width: 299px;
-  height: 73px;
   font-family: Avenir;
   font-size: 55px;
-  line-height: 86px;
   letter-spacing: 5px;
   color: #333333;
   margin-left: 212px;
   z-index: 1;
+  font-weight: 500;
 }
 
 #hello {

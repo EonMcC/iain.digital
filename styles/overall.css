@@ -2,6 +2,7 @@
   --main: #496777;
   --dark: #333333;
   --light: white;
+  --shadow: #131b1f;
 }
 
 body {
@@ -74,8 +75,7 @@ body {
   background: var(--main);
   border-radius: 10px;
   transform: rotate(9.85deg);
-  box-shadow: 5px 5px 10px 0px #1b262c;
-  border: solid 1px black;
+  box-shadow: 10px 10px 10px 0px var(--shadow);
 }
 
 footer {
