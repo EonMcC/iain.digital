@@ -12,32 +12,32 @@ body {
   margin: 0;
 }
 
-#main-heading {
+#landing-page {
+  height: 100vh;
+  width: 100vw;
+  display: relative;
+  /* place-content: center; */
+}
+
+#heading-wrapper {
   position: absolute;
-  width: 993px;
-  height: 65px;
-  left: 186px;
-  top: 224px;
+  top: 30%;
+  left: 15%;
+}
+#heading-wrapper > * {
   font-family: Avenir;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 72px;
-  line-height: 65px;
   letter-spacing: 5px;
   color: var(--light);
+  margin: 0;
+}
+
+#main-heading {
+  font-weight: 500;
+  font-size: 72px;
 }
 
 #sub-heading {
-  position: absolute;
-  width: 993px;
-  height: 65px;
-  left: 186px;
-  top: 320px;
-  font-family: Avenir;
   font-size: 40px;
-  line-height: 65px;
-  letter-spacing: 5px;
-  color: var(--light);
 }
 
 #arrows-container {

@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondPosY = secondEl.getBoundingClientRect().top + pageYOffset;
 
   const thirdEl = document.getElementById("languages");
-  const thirdPosX = thirdEl.getBoundingClientRect().left - 120;
+  const thirdPosX = thirdEl.getBoundingClientRect().left - 60;
   const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
   const fourthEl = document.getElementById("contact-details-container");
@@ -295,8 +295,8 @@ function firstMove(elToMove, x, y) {
     left: ${x}px;
     top: ${y}px;
     width: 863px;
-    height: 570px;
-    border-radius: 285px;
+    height: 370px;
+    border-radius: 50px;
     transform: rotate(0);
     animation: first-circle-transition 1s;
     transition: all 2s`;
@@ -321,10 +321,11 @@ function reverseSecondMove(elToMove, x, y) {
   left: ${x}px;
   top: ${y}px;
   width: 863px;
-  height: 570px;
-  border-radius: 285px;
+  height: 370px;
+  border-radius: 50px;
   transform: rotate(0);
-  transition: all 1.5s`;
+  animation: first-circle-transition 1s;
+  transition: all 2s`;
 }
 
 function thirdMove(elToMove, x, y) {
