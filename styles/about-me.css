@@ -1,21 +1,12 @@
 #about-me-section {
   display: flex;
-  margin-top: 5%;
   height: 100vh;
 }
 
 #about-me-heading-wrapper {
   display: flex;
   align-items: center;
-}
-
-#blob-one {
-  position: absolute;
-  width: 863px;
-  height: 570px;
-  left: -863px;
-  background: rgba(87, 138, 165, 0.6);
-  border-radius: 285px;
+  width: 50%;
 }
 
 #blob {
@@ -47,5 +38,4 @@
   letter-spacing: 2px;
   color: #ffffff;
   align-self: center;
-  margin-left: 200px;
 }
