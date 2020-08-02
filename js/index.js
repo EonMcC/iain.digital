@@ -2,7 +2,7 @@ const startY = window.pageYOffset;
 let moveTo = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const nextButton = document.getElementById("next");
+  const nextButton = document.querySelector(".next-arrows");
   nextButton.addEventListener("click", nextFn);
 
   function nextFn() {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
   }
-  const previousButton = document.getElementById("previous");
+  const previousButton = document.querySelector(".back-arrows");
   previousButton.addEventListener("click", previousFn);
   function previousFn() {
     if (moveTo > 0) {
