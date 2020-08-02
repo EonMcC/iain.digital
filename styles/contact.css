@@ -12,7 +12,6 @@
   height: 491.85px;
   background: url(../images/polaroids.svg) no-repeat;
   transform: rotate(-8deg);
-  opacity: 0.7;
 }
 
 #contact-details-container {
@@ -31,10 +30,11 @@
   font-family: Avenir;
   font-size: 24px;
   letter-spacing: 5px;
-  color: #333333;
+  color: var(--dark);
   z-index: 10;
 }
 
 .contact-details-title {
   text-align: center;
+  font-weight: bold;
 }

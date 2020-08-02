@@ -1,12 +1,29 @@
-:root {
-  --main: #496777;
-  --dark: #333333;
-  --light: white;
-  --shadow: #131b1f;
+@media screen and (max-width: 1500px) {
+  :root {
+    --main: #43738d;
+    --dark: #353535;
+    --light: white;
+    --shadow: #131313;
+    --font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  :root {
+    --main: #43738d;
+    --dark: #353535;
+    --light: white;
+    --shadow: #131313;
+    --font-size: 18px;
+  }
+}
+
+h3 {
+  font-weight: 300;
 }
 
 body {
-  background-color: var(--dark);
+  background-color: #202020;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
@@ -37,6 +54,7 @@ body {
 }
 
 #sub-heading {
+  font-weight: 200;
   font-size: 40px;
 }
 
@@ -72,10 +90,14 @@ body {
   position: absolute;
   width: 535px;
   height: 303px;
-  background: var(--main);
+  background: linear-gradient(
+    135deg,
+    rgba(104, 137, 150, 1) 0%,
+    rgba(67, 115, 141, 1) 100%
+  );
   border-radius: 10px;
   transform: rotate(9.85deg);
-  box-shadow: 10px 10px 10px 0px var(--shadow);
+  box-shadow: 10px 10px 10px 5px var(--shadow);
 }
 
 footer {

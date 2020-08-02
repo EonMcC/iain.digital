@@ -24,7 +24,7 @@
   font-family: Avenir;
   font-size: 55px;
   letter-spacing: 5px;
-  color: #333333;
+  color: var(--dark);
   margin-left: 212px;
   z-index: 1;
   font-weight: 500;
@@ -33,9 +33,9 @@
 #hello {
   width: 583px;
   font-family: Avenir;
-  font-size: 14px;
+  font-size: var(--font-size);
   line-height: 30px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   color: #ffffff;
   align-self: center;
 }

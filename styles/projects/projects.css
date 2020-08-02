@@ -30,15 +30,14 @@
   line-height: 70px;
   letter-spacing: 5px;
   color: #ffffff;
-  margin-top: 0;
 }
 
 #project-sub-text-wrapper {
   width: 302px;
   height: 200px;
-  font-size: 14px;
+  font-size: var(--font-size);
   line-height: 30px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   color: #ffffff;
 }
 
