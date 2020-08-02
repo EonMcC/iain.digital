@@ -33,7 +33,6 @@ body {
   height: 100vh;
   width: 100vw;
   display: relative;
-  /* place-content: center; */
 }
 
 #heading-wrapper {
@@ -58,19 +57,20 @@ body {
   font-size: 40px;
 }
 
-#arrows-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100vh;
-}
-#arrows {
+.scroll-arrows {
   width: 125px;
   height: 53px;
   fill: var(--main);
-  padding-bottom: 50px;
-  animation: breath 3s infinite ease-in-out;
-  transition: opacity 3s;
+  position: absolute;
+}
+
+.back-arrow {
+  top: calc(100vh - 100px);
+  left: calc(50vw - 62.5px);
+}
+.next-arrow {
+  top: calc(100vh - 60px);
+  left: calc(50vw - 62.5px);
 }
 
 @keyframes breath {

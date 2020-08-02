@@ -51,11 +51,5 @@
 
 .arrows {
   cursor: pointer;
-}
-.back-arrows {
-  fill: var(--main);
-}
-
-.next-arrows {
-  fill: var(--main);
+  opacity: 0;
 }

@@ -193,6 +193,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  const downArrowTop = document.querySelector(".back-arrow");
+  const firstArrowPosX = downArrowTop.getBoundingClientRect().left;
+  const firstArrowPosY = downArrowTop.getBoundingClientRect().top + pageYOffset;
+
+  const downArrowBottom = document.querySelector(".next-arrow");
+  const secondArrowPosX = downArrowBottom.getBoundingClientRect().left;
+  const secondArrowPosY =
+    downArrowBottom.getBoundingClientRect().top + pageYOffset;
+
+  const arrowBreakPoint = document
+    .querySelector("#sub-heading")
+    .getBoundingClientRect().top;
+
+  const backArrows = document.querySelector(".back-arrows");
+  const backArrowsPosX = backArrows.getBoundingClientRect().left;
+  const backArrowsPosY = backArrows.getBoundingClientRect().top + pageYOffset;
+
+  const nextArrows = document.querySelector(".next-arrows");
+  const nextArrowsPosX = nextArrows.getBoundingClientRect().left;
+  const nextArrowsPosY = nextArrows.getBoundingClientRect().top + pageYOffset;
+
   const firstEl = document.getElementById("project-background");
   const firstPosX = firstEl.getBoundingClientRect().left;
   const firstPosY = firstEl.getBoundingClientRect().top + pageYOffset;
@@ -212,12 +233,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const fourthPosX = fourthEl.getBoundingClientRect().left - 100;
   const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset;
 
+  window.addEventListener("scroll", readyArrowMove);
   window.addEventListener("scroll", readyFirstMove);
   window.addEventListener("scroll", readySecondMove);
   window.addEventListener("scroll", readyThirdMove);
 
   const firstTrigger = document.getElementById("super-trumps");
   const firstTriggerPos = firstTrigger.getBoundingClientRect().top;
+
+  function readyArrowMove() {
+    if (pageYOffset > arrowBreakPoint) {
+      window.removeEventListener("scroll", readyArrowMove);
+      window.addEventListener("scroll", readyReverseArrowMove);
+      arrowMoveTop(downArrowTop, backArrowsPosX, backArrowsPosY);
+      arrowMoveBottom(downArrowBottom, nextArrowsPosX, nextArrowsPosY);
+    }
+  }
+  function readyReverseArrowMove() {
+    if (pageYOffset < arrowBreakPoint) {
+      window.removeEventListener("scroll", readyReverseArrowMove);
+      window.addEventListener("scroll", readyArrowMove);
+      reverseArrowMoveTop(downArrowTop, firstArrowPosX, firstArrowPosY);
+      reverseArrowMoveBottom(downArrowBottom, secondArrowPosX, secondArrowPosY);
+    }
+  }
 
   function readyFirstMove() {
     if (pageYOffset > firstTriggerPos) {
@@ -273,14 +312,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-window.onscroll = function () {
-  var currentY = window.pageYOffset;
-  if (startY === currentY) {
-    document.getElementById("arrows").style.opacity = "1";
-  } else {
-    document.getElementById("arrows").style.opacity = "0";
-  }
-};
+// window.onscroll = function () {
+//   var currentY = window.pageYOffset;
+//   if (startY === currentY) {
+//     document.querySelector(".back-arrow").style.opacity = "1";
+//   } else {
+//     document.querySelector(".back-arrow").style.cssText =
+//       "transform: rotate(90deg);";
+//   }
+// };
 
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
@@ -288,6 +328,41 @@ function getOffset(el) {
     left: rect.left + window.scrollX,
     top: rect.top + window.scrollY,
   };
+}
+
+function arrowMoveTop(arrowToMove, x, y) {
+  arrowToMove.style.cssText = `
+    left: calc(${x}px - 62.5px);
+    top: ${y}px;
+    fill: white;
+    transform: rotate(-270deg);
+    transition: all 2s
+    `;
+}
+function reverseArrowMoveTop(arrowToMove, x, y) {
+  arrowToMove.style.cssText = `
+  left: ${x}px;
+  top: ${y}px;
+  fill: var(--main);
+  transform: rotate(0deg);
+  transition: all 2s`;
+}
+
+function arrowMoveBottom(arrowToMove, x, y) {
+  arrowToMove.style.cssText = `
+    left: ${x}px;
+    top: ${y}px;
+    fill: white;
+    transform: rotate(270deg);
+    transition: all 2s`;
+}
+function reverseArrowMoveBottom(arrowToMove, x, y) {
+  arrowToMove.style.cssText = `
+  left: ${x}px;
+  top: ${y}px;
+  fill: var(--main);
+  transform: rotate(0deg);
+  transition: all 2s`;
 }
 
 function firstMove(elToMove, x, y) {
