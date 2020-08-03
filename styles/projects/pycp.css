@@ -2,13 +2,14 @@
   position: absolute;
   width: 299px;
   opacity: 0;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 #pycp-text {
   position: absolute;
   width: 302px;
   opacity: 0;
+  margin-top: 40px;
 }
 
 #pycp-image {

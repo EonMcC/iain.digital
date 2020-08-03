@@ -4,7 +4,8 @@
     --dark: #353535;
     --light: white;
     --shadow: #131313;
-    --font-size: 14px;
+    --background: #202020;
+    --font-size: 16px;
   }
 }
 
@@ -14,7 +15,8 @@
     --dark: #353535;
     --light: white;
     --shadow: #131313;
-    --font-size: 18px;
+    --background: #202020;
+    --font-size: 20px;
   }
 }
 
@@ -23,10 +25,12 @@ h3 {
 }
 
 body {
-  background-color: #202020;
+  background-color: var(--background);
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  font-family: Avenir;
+  letter-spacing: 2px;
 }
 
 #landing-page {
@@ -41,7 +45,6 @@ body {
   left: 15%;
 }
 #heading-wrapper > * {
-  font-family: Avenir;
   letter-spacing: 5px;
   color: var(--light);
   margin: 0;
@@ -62,14 +65,18 @@ body {
   height: 53px;
   fill: var(--main);
   position: absolute;
+  animation: breath 2s alternate infinite;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
 }
 
 .back-arrow {
-  top: calc(100vh - 100px);
+  top: calc(100vh - 120px);
   left: calc(50vw - 62.5px);
 }
 .next-arrow {
-  top: calc(100vh - 60px);
+  top: calc(100vh - 70px);
   left: calc(50vw - 62.5px);
 }
 
@@ -77,11 +84,8 @@ body {
   0% {
     fill: var(--main);
   }
-  50% {
-    fill: #49677709;
-  }
   100% {
-    fill: var(--main);
+    fill: #4967773b;
   }
 }
 
@@ -98,10 +102,4 @@ body {
   border-radius: 10px;
   transform: rotate(9.85deg);
   box-shadow: 10px 10px 10px 5px var(--shadow);
-}
-
-footer {
-  background-color: var(--dark);
-  height: 300px;
-  border-top: solid 2px black;
 }

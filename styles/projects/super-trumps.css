@@ -13,10 +13,9 @@
 #super-trumps-github {
   position: absolute;
   width: 302px;
-  font-family: Avenir;
   font-size: 14px;
   line-height: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #ffffff;
   text-decoration: underline;
   margin-top: 30px;
@@ -42,5 +41,5 @@
   border-radius: 10px;
   opacity: 1;
   position: relative;
-  box-shadow: 5px 5px 5px 0px var(--shadow);
+  box-shadow: 5px 5px 5px 5px var(--shadow);
 }

@@ -1,7 +1,6 @@
 #projects-wrapper {
   display: flex;
   justify-content: space-evenly;
-  font-family: Avenir;
 }
 
 #project-text-wrapper {
@@ -20,14 +19,13 @@
   justify-content: space-around;
   align-items: center;
   margin-right: 5%;
-  padding-top: 50px;
 }
 
 #project-heading-text-wrapper {
   width: 299px;
   height: 200px;
   font-size: 50px;
-  line-height: 70px;
+  line-height: 55px;
   letter-spacing: 5px;
   color: #ffffff;
 }
@@ -50,6 +48,16 @@
 }
 
 .arrows {
-  cursor: pointer;
+  /* cursor: pointer; */
   opacity: 0;
+}
+
+#super-trumps-full {
+  opacity: 0;
+  z-index: -1;
+  height: 95vh;
+  width: 95vw;
+  background-color: green;
+  position: absolute;
+  transition: all 3s;
 }

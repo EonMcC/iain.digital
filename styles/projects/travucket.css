@@ -2,6 +2,7 @@
   position: absolute;
   width: 299px;
   opacity: 0;
+  font-size: 45px;
 }
 
 #travucket-text {
@@ -15,7 +16,7 @@
   width: 302px;
   font-size: 14px;
   line-height: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #ffffff;
   text-decoration: underline;
   margin-top: 30px;
@@ -25,7 +26,7 @@
 
 #travucket-image {
   width: 502px;
-  height: 270px;
+  height: 249px;
   background: url(../../images/travucket.png) no-repeat;
   box-sizing: border-box;
   border-radius: 10px;

@@ -2,7 +2,15 @@ const startY = window.pageYOffset;
 let moveTo = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const nextButton = document.querySelector(".next-arrows");
+  const blah = document.querySelector("#super-trumps-image");
+  const blahImage = document.getElementById("super-trumps-full");
+  blah.addEventListener("click", fullScreenFn);
+
+  function fullScreenFn() {
+    blahImage.style.cssText = "opacity: 1; z-index: 11;";
+  }
+
+  const nextButton = document.querySelector(".next-arrow");
   nextButton.addEventListener("click", nextFn);
 
   function nextFn() {
@@ -51,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
   }
-  const previousButton = document.querySelector(".back-arrows");
+  const previousButton = document.querySelector(".back-arrow");
   previousButton.addEventListener("click", previousFn);
   function previousFn() {
     if (moveTo > 0) {
@@ -226,11 +234,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondPosY = secondEl.getBoundingClientRect().top + pageYOffset;
 
   const thirdEl = document.getElementById("languages");
-  const thirdPosX = thirdEl.getBoundingClientRect().left - 60;
+  const thirdPosX = thirdEl.getBoundingClientRect().left - 50;
   const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
   const fourthEl = document.getElementById("contact-details-container");
-  const fourthPosX = fourthEl.getBoundingClientRect().left - 100;
+  const fourthPosX = fourthEl.getBoundingClientRect().left - 22;
   const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset;
 
   window.addEventListener("scroll", readyArrowMove);
@@ -312,16 +320,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// window.onscroll = function () {
-//   var currentY = window.pageYOffset;
-//   if (startY === currentY) {
-//     document.querySelector(".back-arrow").style.opacity = "1";
-//   } else {
-//     document.querySelector(".back-arrow").style.cssText =
-//       "transform: rotate(90deg);";
-//   }
-// };
-
 function getOffset(el) {
   const rect = el.getBoundingClientRect();
   return {
@@ -334,8 +332,8 @@ function arrowMoveTop(arrowToMove, x, y) {
   arrowToMove.style.cssText = `
     left: calc(${x}px - 62.5px);
     top: ${y}px;
-    fill: white;
-    transform: rotate(-270deg);
+    
+    transform: rotate(90deg);
     transition: all 2s
     `;
 }
@@ -352,8 +350,8 @@ function arrowMoveBottom(arrowToMove, x, y) {
   arrowToMove.style.cssText = `
     left: ${x}px;
     top: ${y}px;
-    fill: white;
-    transform: rotate(270deg);
+    
+    transform: rotate(-90deg);
     transition: all 2s`;
 }
 function reverseArrowMoveBottom(arrowToMove, x, y) {
@@ -373,7 +371,6 @@ function firstMove(elToMove, x, y) {
     height: 370px;
     border-radius: 50px;
     transform: rotate(0);
-    animation: first-circle-transition 1s;
     transition: all 2s`;
 }
 function reverseFirstMove(elToMove, x, y) {
@@ -385,10 +382,17 @@ function secondMove(elToMove, x, y) {
   left: ${x}px;
   top: ${y}px;
   width: 863px;
-  height: 570px;
-  border-radius: 285px;
+  height: 370px;
+  border-radius: 50px;
   transform: rotate(0);
-  transition: all 2s`;
+  animation: first-circle-transition 1s;
+  transition: all 2s;
+  background: linear-gradient(
+    -135deg,
+    rgba(104, 137, 150, 1) 0%,
+    rgba(67, 115, 141, 1) 70%  
+  );
+  box-shadow: -10px 10px 10px 5px var(--shadow);`;
 }
 
 function reverseSecondMove(elToMove, x, y) {
@@ -409,9 +413,15 @@ function thirdMove(elToMove, x, y) {
     top: ${y}px;
     width: 863px;
     height: 570px;
-    border-radius: 285px;
+    border-radius: 50px;
     transition: all 1.5s;
-    transform: rotate(45deg);
+    transform: rotate(90deg);
+    background: linear-gradient(
+      135deg,
+      rgba(67, 115, 141, 1) 100%,
+      rgba(104, 137, 150, 1) 0%    
+    );
+    box-shadow: 10px 10px 10px 5px var(--shadow);
    `;
 }
 
@@ -420,9 +430,15 @@ function reverseThirdMove(elToMove, x, y) {
   left: ${x}px;
   top: ${y}px;
   width: 863px;
-  height: 570px;
-  border-radius: 285px;
+  height: 370px;
+  border-radius: 50px;
   transform: rotate(0);
   animation: first-circle-transition 1s;
-  transition: all 2s`;
+  transition: all 2s;
+  background: linear-gradient(
+    -135deg,
+    rgba(104, 137, 150, 1) 0%,
+    rgba(67, 115, 141, 1) 100%  
+  );
+  box-shadow: -10px 10px 10px 5px var(--shadow);`;
 }

@@ -8,10 +8,12 @@
 }
 
 #polaroids {
-  width: 552.83px;
-  height: 491.85px;
-  background: url(../images/polaroids.svg) no-repeat;
-  transform: rotate(-8deg);
+  opacity: 1;
+  width: 400px;
+  height: 450px;
+  background: url(../images/profile.jpeg) no-repeat;
+  background-size: contain;
+  transform: rotate(-4deg);
 }
 
 #contact-details-container {
@@ -27,14 +29,22 @@
 }
 
 .contact-details * {
-  font-family: Avenir;
   font-size: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   color: var(--dark);
   z-index: 10;
+  text-decoration: none;
 }
 
 .contact-details-title {
   text-align: center;
   font-weight: bold;
+  color: var(--main);
+}
+
+.contact-details-links * {
+  color: #202020;
+}
+.contact-details-links *:hover {
+  color: white;
 }
