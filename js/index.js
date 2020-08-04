@@ -13,103 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
       "left: -100vw; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
     projectTwo.style.cssText =
       "left: 0; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-    // if (moveTo < 1) {
-    //   moveTo += 1;
-    // } else {
-    //   moveTo = 0;
-    // }
-    // switch (moveTo) {
-    //   case 0:
-    //     handleSuperTrumps("show");
-    //     handleCodingLog("hide");
-    //     handlePycp("hide");
-    //     handleJPark("hide");
-    //     handleTravucket("hide");
-    //     break;
-    //   case 1:
-    //     handleSuperTrumps("hide");
-    //     handleCodingLog("show");
-    //     handlePycp("hide");
-    //     handleJPark("hide");
-    //     handleTravucket("hide");
-    //     break;
-    // case 2:
-    //   handleSuperTrumps("hide");
-    //   handleCodingLog("hide");
-    //   handlePycp("show");
-    //   handleJPark("hide");
-    //   handleTravucket("hide");
-    //   break;
-    // case 3:
-    //   handleSuperTrumps("hide");
-    //   handleCodingLog("hide");
-    //   handlePycp("hide");
-    //   handleJPark("show");
-    //   handleTravucket("hide");
-    //   break;
-    // case 4:
-    //   handleSuperTrumps("hide");
-    //   handleCodingLog("hide");
-    //   handlePycp("hide");
-    //   handleJPark("hide");
-    //   handleTravucket("show");
-    //   break;
-    // default:
-    //   break;
-    // }
   }
+
   const previousButton = document.querySelector(".back-arrow");
   previousButton.addEventListener("click", previousFn);
+
   function previousFn() {
     projectOne.style.cssText =
       "left: 0; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
     projectTwo.style.cssText =
       "left: +100; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-    // if (moveTo > 0) {
-    //   moveTo -= 1;
-    // } else {
-    //   moveTo = 1;
-    // }
-
-    // switch (moveTo) {
-    //   case 0:
-    //     handleSuperTrumps("show");
-    //     handleCodingLog("hide");
-    //     handlePycp("hide");
-    //     handleJPark("hide");
-    //     handleTravucket("hide");
-    //     break;
-    //   case 1:
-    //     handleSuperTrumps("hide");
-    //     handleCodingLog("show");
-    //     handlePycp("hide");
-    //     handleJPark("hide");
-    //     handleTravucket("hide");
-    //     break;
-    // case 2:
-    //   handleSuperTrumps("hide");
-    //   handleCodingLog("hide");
-    //   handlePycp("show");
-    //   handleJPark("hide");
-    //   handleTravucket("hide");
-    //   break;
-    // case 3:
-    //   handleSuperTrumps("hide");
-    //   handleCodingLog("hide");
-    //   handlePycp("hide");
-    //   handleJPark("show");
-    //   handleTravucket("hide");
-    //   break;
-    // case 4:
-    //   handleSuperTrumps("hide");
-    //   handleCodingLog("hide");
-    //   handlePycp("hide");
-    //   handleJPark("hide");
-    //   handleTravucket("show");
-    //   break;
-    //   default:
-    //     break;
-    // }
   }
 
   function handleSuperTrumps(option) {
@@ -227,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextArrowsPosX = nextArrows.getBoundingClientRect().left;
   const nextArrowsPosY = nextArrows.getBoundingClientRect().top + pageYOffset;
 
-  const firstEl = document.getElementById("project-background");
+  const firstEl = document.getElementById("blob");
   const firstPosX = firstEl.getBoundingClientRect().left;
   const firstPosY = firstEl.getBoundingClientRect().top + pageYOffset;
 

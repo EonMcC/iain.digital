@@ -23,7 +23,7 @@
   width: 100vw;
 }
 
-#project-text-wrapper {
+#project-left-wrapper {
   width: 50%;
   display: flex;
   flex-direction: row;
@@ -40,6 +40,12 @@
   margin-right: 5%;
 }
 
+#project-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+}
+
 #project-heading-text-wrapper {
   width: 299px;
   height: 200px;
@@ -47,6 +53,7 @@
   line-height: 55px;
   letter-spacing: 5px;
   color: #ffffff;
+  flex: 1;
 }
 
 #project-sub-text-wrapper {
@@ -55,6 +62,7 @@
   font-size: var(--font-size);
   line-height: 30px;
   color: #ffffff;
+  flex: 2;
 }
 
 #github-wrapper {
@@ -64,6 +72,7 @@
   line-height: 30px;
   letter-spacing: 3px;
   color: #ffffff;
+  flex: 1;
 }
 
 .arrows {

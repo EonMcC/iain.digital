@@ -90,17 +90,17 @@ body {
 }
 
 #el-to-move {
-  opacity: 0;
+  opacity: 1;
   z-index: -1;
   position: absolute;
-  width: 535px;
-  height: 303px;
+  width: 863px;
+  height: 370px;
   background: linear-gradient(
     135deg,
     rgba(104, 137, 150, 1) 0%,
     rgba(67, 115, 141, 1) 100%
   );
-  border-radius: 10px;
+  border-radius: 50px;
   transform: rotate(9.85deg);
   box-shadow: 10px 10px 10px 5px var(--shadow);
 }
