@@ -26,7 +26,7 @@ h3 {
 
 body {
   background-color: var(--background);
-  overflow-x: hidden;
+  overflow-x: visible;
   padding: 0;
   margin: 0;
   font-family: Avenir;
@@ -90,6 +90,7 @@ body {
 }
 
 #el-to-move {
+  opacity: 0;
   z-index: -1;
   position: absolute;
   width: 535px;

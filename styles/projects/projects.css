@@ -1,6 +1,26 @@
+#projects-wrapper-wrapper {
+  width: 200vw;
+  height: 100vh;
+  display: flex;
+}
+
+#project-one-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+}
+#project-two-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 100vw;
+}
+
 #projects-wrapper {
   display: flex;
   justify-content: space-evenly;
+  width: 100vw;
 }
 
 #project-text-wrapper {
@@ -47,6 +67,5 @@
 }
 
 .arrows {
-  /* cursor: pointer; */
   opacity: 0;
 }

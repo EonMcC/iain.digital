@@ -10,103 +10,114 @@ document.addEventListener("DOMContentLoaded", () => {
     blahImage.style.cssText = "opacity: 1; z-index: 11;";
   }
 
+  const projectOne = document.getElementById("project-one-wrapper");
+  const projectTwo = document.getElementById("project-two-wrapper");
+
   const nextButton = document.querySelector(".next-arrow");
   nextButton.addEventListener("click", nextFn);
 
   function nextFn() {
-    if (moveTo < 1) {
-      moveTo += 1;
-    } else {
-      moveTo = 0;
-    }
-    switch (moveTo) {
-      case 0:
-        handleSuperTrumps("show");
-        handleCodingLog("hide");
-        handlePycp("hide");
-        handleJPark("hide");
-        handleTravucket("hide");
-        break;
-      case 1:
-        handleSuperTrumps("hide");
-        handleCodingLog("show");
-        handlePycp("hide");
-        handleJPark("hide");
-        handleTravucket("hide");
-        break;
-      // case 2:
-      //   handleSuperTrumps("hide");
-      //   handleCodingLog("hide");
-      //   handlePycp("show");
-      //   handleJPark("hide");
-      //   handleTravucket("hide");
-      //   break;
-      // case 3:
-      //   handleSuperTrumps("hide");
-      //   handleCodingLog("hide");
-      //   handlePycp("hide");
-      //   handleJPark("show");
-      //   handleTravucket("hide");
-      //   break;
-      // case 4:
-      //   handleSuperTrumps("hide");
-      //   handleCodingLog("hide");
-      //   handlePycp("hide");
-      //   handleJPark("hide");
-      //   handleTravucket("show");
-      //   break;
-      default:
-        break;
-    }
+    projectOne.style.cssText =
+      "left: -100vw; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
+    projectTwo.style.cssText =
+      "left: 0; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+    // if (moveTo < 1) {
+    //   moveTo += 1;
+    // } else {
+    //   moveTo = 0;
+    // }
+    // switch (moveTo) {
+    //   case 0:
+    //     handleSuperTrumps("show");
+    //     handleCodingLog("hide");
+    //     handlePycp("hide");
+    //     handleJPark("hide");
+    //     handleTravucket("hide");
+    //     break;
+    //   case 1:
+    //     handleSuperTrumps("hide");
+    //     handleCodingLog("show");
+    //     handlePycp("hide");
+    //     handleJPark("hide");
+    //     handleTravucket("hide");
+    //     break;
+    // case 2:
+    //   handleSuperTrumps("hide");
+    //   handleCodingLog("hide");
+    //   handlePycp("show");
+    //   handleJPark("hide");
+    //   handleTravucket("hide");
+    //   break;
+    // case 3:
+    //   handleSuperTrumps("hide");
+    //   handleCodingLog("hide");
+    //   handlePycp("hide");
+    //   handleJPark("show");
+    //   handleTravucket("hide");
+    //   break;
+    // case 4:
+    //   handleSuperTrumps("hide");
+    //   handleCodingLog("hide");
+    //   handlePycp("hide");
+    //   handleJPark("hide");
+    //   handleTravucket("show");
+    //   break;
+    // default:
+    //   break;
+    // }
   }
   const previousButton = document.querySelector(".back-arrow");
   previousButton.addEventListener("click", previousFn);
   function previousFn() {
-    if (moveTo > 0) {
-      moveTo -= 1;
-    } else {
-      moveTo = 1;
-    }
+    projectOne.style.cssText =
+      "left: 0; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+    projectTwo.style.cssText =
+      "left: +100; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+    // if (moveTo > 0) {
+    //   moveTo -= 1;
+    // } else {
+    //   moveTo = 1;
+    // }
 
-    switch (moveTo) {
-      case 0:
-        handleSuperTrumps("show");
-        handleCodingLog("hide");
-        handlePycp("hide");
-        handleJPark("hide");
-        handleTravucket("hide");
-        break;
-      case 1:
-        handleSuperTrumps("hide");
-        handleCodingLog("show");
-        handlePycp("hide");
-        handleJPark("hide");
-        handleTravucket("hide");
-        break;
-      // case 2:
-      //   handleSuperTrumps("hide");
-      //   handleCodingLog("hide");
-      //   handlePycp("show");
-      //   handleJPark("hide");
-      //   handleTravucket("hide");
-      //   break;
-      // case 3:
-      //   handleSuperTrumps("hide");
-      //   handleCodingLog("hide");
-      //   handlePycp("hide");
-      //   handleJPark("show");
-      //   handleTravucket("hide");
-      //   break;
-      // case 4:
-      //   handleSuperTrumps("hide");
-      //   handleCodingLog("hide");
-      //   handlePycp("hide");
-      //   handleJPark("hide");
-      //   handleTravucket("show");
-      //   break;
-      default:
-        break;
-    }
+    // switch (moveTo) {
+    //   case 0:
+    //     handleSuperTrumps("show");
+    //     handleCodingLog("hide");
+    //     handlePycp("hide");
+    //     handleJPark("hide");
+    //     handleTravucket("hide");
+    //     break;
+    //   case 1:
+    //     handleSuperTrumps("hide");
+    //     handleCodingLog("show");
+    //     handlePycp("hide");
+    //     handleJPark("hide");
+    //     handleTravucket("hide");
+    //     break;
+    // case 2:
+    //   handleSuperTrumps("hide");
+    //   handleCodingLog("hide");
+    //   handlePycp("show");
+    //   handleJPark("hide");
+    //   handleTravucket("hide");
+    //   break;
+    // case 3:
+    //   handleSuperTrumps("hide");
+    //   handleCodingLog("hide");
+    //   handlePycp("hide");
+    //   handleJPark("show");
+    //   handleTravucket("hide");
+    //   break;
+    // case 4:
+    //   handleSuperTrumps("hide");
+    //   handleCodingLog("hide");
+    //   handlePycp("hide");
+    //   handleJPark("hide");
+    //   handleTravucket("show");
+    //   break;
+    //   default:
+    //     break;
+    // }
   }
 
   function handleSuperTrumps(option) {
