@@ -2,14 +2,6 @@ const startY = window.pageYOffset;
 let moveTo = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const blah = document.querySelector("#super-trumps-image");
-  const blahImage = document.getElementById("super-trumps-full");
-  blah.addEventListener("click", fullScreenFn);
-
-  function fullScreenFn() {
-    blahImage.style.cssText = "opacity: 1; z-index: 11;";
-  }
-
   const projectOne = document.getElementById("project-one-wrapper");
   const projectTwo = document.getElementById("project-two-wrapper");
 
@@ -225,6 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector("#sub-heading")
     .getBoundingClientRect().top;
 
+  const superTrumpsImage = document.querySelector(".super-trumps-image");
+
   const backArrows = document.querySelector(".back-arrows");
   const backArrowsPosX = backArrows.getBoundingClientRect().left;
   const backArrowsPosY = backArrows.getBoundingClientRect().top + pageYOffset;
@@ -264,7 +258,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pageYOffset > arrowBreakPoint) {
       window.removeEventListener("scroll", readyArrowMove);
       window.addEventListener("scroll", readyReverseArrowMove);
-      arrowMoveTop(downArrowTop, backArrowsPosX, backArrowsPosY);
+      arrowMoveTop(
+        downArrowTop,
+        backArrowsPosX,
+        backArrowsPosY,
+        superTrumpsImage
+      );
       arrowMoveBottom(downArrowBottom, nextArrowsPosX, nextArrowsPosY);
     }
   }
@@ -272,7 +271,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pageYOffset < arrowBreakPoint) {
       window.removeEventListener("scroll", readyReverseArrowMove);
       window.addEventListener("scroll", readyArrowMove);
-      reverseArrowMoveTop(downArrowTop, firstArrowPosX, firstArrowPosY);
+      reverseArrowMoveTop(
+        downArrowTop,
+        firstArrowPosX,
+        firstArrowPosY,
+        superTrumpsImage
+      );
       reverseArrowMoveBottom(downArrowBottom, secondArrowPosX, secondArrowPosY);
     }
   }
@@ -339,7 +343,9 @@ function getOffset(el) {
   };
 }
 
-function arrowMoveTop(arrowToMove, x, y) {
+function arrowMoveTop(arrowToMove, x, y, superTrumpsImage) {
+  superTrumpsImage.style.cssText =
+    "opacity: 1; transition: opacity 2s ease-in-out; ";
   arrowToMove.style.cssText = `
     left: calc(${x}px - 62.5px);
     top: ${y}px;
@@ -348,7 +354,9 @@ function arrowMoveTop(arrowToMove, x, y) {
     transition: all 2s
     `;
 }
-function reverseArrowMoveTop(arrowToMove, x, y) {
+function reverseArrowMoveTop(arrowToMove, x, y, superTrumpsImage) {
+  superTrumpsImage.style.cssText =
+    "opacity: 0; transition: opacity 2s ease-in-out; ";
   arrowToMove.style.cssText = `
   left: ${x}px;
   top: ${y}px;
