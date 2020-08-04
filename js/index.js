@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nextButton.addEventListener("click", nextFn);
 
   function nextFn() {
-    if (moveTo < 4) {
+    if (moveTo < 1) {
       moveTo += 1;
     } else {
       moveTo = 0;
@@ -34,27 +34,27 @@ document.addEventListener("DOMContentLoaded", () => {
         handleJPark("hide");
         handleTravucket("hide");
         break;
-      case 2:
-        handleSuperTrumps("hide");
-        handleCodingLog("hide");
-        handlePycp("show");
-        handleJPark("hide");
-        handleTravucket("hide");
-        break;
-      case 3:
-        handleSuperTrumps("hide");
-        handleCodingLog("hide");
-        handlePycp("hide");
-        handleJPark("show");
-        handleTravucket("hide");
-        break;
-      case 4:
-        handleSuperTrumps("hide");
-        handleCodingLog("hide");
-        handlePycp("hide");
-        handleJPark("hide");
-        handleTravucket("show");
-        break;
+      // case 2:
+      //   handleSuperTrumps("hide");
+      //   handleCodingLog("hide");
+      //   handlePycp("show");
+      //   handleJPark("hide");
+      //   handleTravucket("hide");
+      //   break;
+      // case 3:
+      //   handleSuperTrumps("hide");
+      //   handleCodingLog("hide");
+      //   handlePycp("hide");
+      //   handleJPark("show");
+      //   handleTravucket("hide");
+      //   break;
+      // case 4:
+      //   handleSuperTrumps("hide");
+      //   handleCodingLog("hide");
+      //   handlePycp("hide");
+      //   handleJPark("hide");
+      //   handleTravucket("show");
+      //   break;
       default:
         break;
     }
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (moveTo > 0) {
       moveTo -= 1;
     } else {
-      moveTo = 4;
+      moveTo = 1;
     }
 
     switch (moveTo) {
@@ -83,27 +83,27 @@ document.addEventListener("DOMContentLoaded", () => {
         handleJPark("hide");
         handleTravucket("hide");
         break;
-      case 2:
-        handleSuperTrumps("hide");
-        handleCodingLog("hide");
-        handlePycp("show");
-        handleJPark("hide");
-        handleTravucket("hide");
-        break;
-      case 3:
-        handleSuperTrumps("hide");
-        handleCodingLog("hide");
-        handlePycp("hide");
-        handleJPark("show");
-        handleTravucket("hide");
-        break;
-      case 4:
-        handleSuperTrumps("hide");
-        handleCodingLog("hide");
-        handlePycp("hide");
-        handleJPark("hide");
-        handleTravucket("show");
-        break;
+      // case 2:
+      //   handleSuperTrumps("hide");
+      //   handleCodingLog("hide");
+      //   handlePycp("show");
+      //   handleJPark("hide");
+      //   handleTravucket("hide");
+      //   break;
+      // case 3:
+      //   handleSuperTrumps("hide");
+      //   handleCodingLog("hide");
+      //   handlePycp("hide");
+      //   handleJPark("show");
+      //   handleTravucket("hide");
+      //   break;
+      // case 4:
+      //   handleSuperTrumps("hide");
+      //   handleCodingLog("hide");
+      //   handlePycp("hide");
+      //   handleJPark("hide");
+      //   handleTravucket("show");
+      //   break;
       default:
         break;
     }
