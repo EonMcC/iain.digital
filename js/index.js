@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .getBoundingClientRect().top;
 
   const superTrumpsImage = document.querySelector(".super-trumps-image");
+  const codinglogImage = document.querySelector("#coding-log-image");
 
   const backArrows = document.querySelector(".back-arrows");
   const backArrowsPosX = backArrows.getBoundingClientRect().left;
@@ -160,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset;
 
   window.addEventListener("scroll", readyArrowMove);
-  window.addEventListener("scroll", readyFirstMove);
+  window.addEventListener("scroll", readyFadeImage);
   window.addEventListener("scroll", readySecondMove);
   window.addEventListener("scroll", readyThirdMove);
 
@@ -194,18 +195,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function readyFirstMove() {
+  function readyFadeImage() {
     if (pageYOffset > firstTriggerPos) {
-      window.removeEventListener("scroll", readyFirstMove);
-      window.addEventListener("scroll", reverseReadyFirstMove);
-      firstMove(elToMove, secondPosX, secondPosY);
+      window.removeEventListener("scroll", readyFadeImage);
+      window.addEventListener("scroll", reverseReadyFadeImage);
+      fadeImage(superTrumpsImage, codinglogImage);
     }
   }
-  function reverseReadyFirstMove() {
+  function reverseReadyFadeImage() {
     if (pageYOffset < firstTriggerPos) {
-      window.removeEventListener("scroll", reverseReadyFirstMove);
-      window.addEventListener("scroll", readyFirstMove);
-      reverseFirstMove(elToMove, firstPosX, firstPosY);
+      window.removeEventListener("scroll", reverseReadyFadeImage);
+      window.addEventListener("scroll", readyFadeImage);
+      reverseFadeImage(superTrumpsImage, codinglogImage);
     }
   }
 
@@ -295,18 +296,17 @@ function reverseArrowMoveBottom(arrowToMove, x, y) {
   transition: all 2s`;
 }
 
-function firstMove(elToMove, x, y) {
-  elToMove.style.cssText = `
-    left: ${x}px;
-    top: ${y}px;
-    width: 863px;
-    height: 370px;
-    border-radius: 50px;
-    transform: rotate(0);
-    transition: all 2s`;
+function fadeImage(superTrumpsImage, codinglogImage) {
+  superTrumpsImage.style.cssText = `
+    opacity: 0;
+    transition: all 1.5s`;
+  codinglogImage.style.cssText = `
+    opacity: 0;
+    transition: all 1.5s`;
 }
-function reverseFirstMove(elToMove, x, y) {
-  elToMove.style.cssText = `left: ${x}px; top: ${y}px; transition: all 1.5s`;
+function reverseFadeImage(superTrumsImage, codinglogImage) {
+  superTrumsImage.style.cssText = `opacity: 1; transition: all 1.5s`;
+  codinglogImage.style.cssText = `opacity: 1; transition: all 1.5s`;
 }
 
 function secondMove(elToMove, x, y) {

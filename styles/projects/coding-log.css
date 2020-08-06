@@ -1,17 +1,14 @@
 #coding-log {
-  position: absolute;
   width: 299px;
   opacity: 1;
 }
 
 #coding-log-text {
-  position: absolute;
   width: 302px;
   opacity: 1;
 }
 
 #coding-log-github {
-  position: absolute;
   width: 302px;
   font-size: 14px;
   line-height: 30px;
@@ -23,14 +20,26 @@
   z-index: 0;
 }
 
-#coding-log-image {
-  width: 502px;
-  height: 255px;
-  background: url(../../images/coding-log.png) no-repeat center;
-  background-size: cover;
-  box-sizing: border-box;
-  border-radius: 10px;
-  opacity: 1;
-  position: relative;
-  box-shadow: 5px 5px 5px 5px var(--shadow);
+@media screen and (max-width: 1500px) {
+  #coding-log-image {
+    width: 658px;
+    height: 531px;
+    background: url(../../images/coding-log-image.png) no-repeat center;
+    background-size: cover;
+    box-sizing: border-box;
+    opacity: 1;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #coding-log-image {
+    width: 858px;
+    height: 731px;
+    background: url(../../images/coding-log-image.png) no-repeat center;
+    background-size: cover;
+    box-sizing: border-box;
+    opacity: 1;
+    position: relative;
+  }
 }

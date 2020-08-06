@@ -26,7 +26,7 @@ h3 {
 
 body {
   background-color: var(--background);
-  overflow-x: visible;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: Avenir;
@@ -101,6 +101,5 @@ body {
     rgba(67, 115, 141, 1) 100%
   );
   border-radius: 50px;
-  transform: rotate(9.85deg);
   box-shadow: 10px 10px 10px 5px var(--shadow);
 }
