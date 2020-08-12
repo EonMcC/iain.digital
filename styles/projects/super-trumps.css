@@ -1,35 +1,26 @@
 #super-trumps {
-  position: absolute;
   width: 299px;
-  opacity: 1;
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  margin-top: 0;
 }
 
 #super-trumps-text {
-  position: absolute;
   width: 302px;
-  opacity: 1;
+  font-size: var(--font-size);
+  line-height: 30px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 0;
 }
 
 #super-trumps-github {
-  position: absolute;
-  width: 302px;
   font-size: 14px;
-  line-height: 30px;
-  letter-spacing: 2px;
   color: #ffffff;
   text-decoration: underline;
-  margin-top: 30px;
-  opacity: 1;
   z-index: 10;
-}
-
-#project-background {
-  opacity: 0;
-  width: 535px;
-  height: 303px;
-  background: #496777;
-  border-radius: 10px;
-  position: absolute;
 }
 
 .super-trumps-image {
@@ -39,12 +30,8 @@
   background-size: contain;
   border-radius: 10px;
   opacity: 1;
-  position: relative;
   box-shadow: 5px 5px 5px 5px var(--shadow);
   transform: rotate(9.85deg);
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
   overflow: visible;
   opacity: 0;
 }
@@ -69,6 +56,7 @@
   width: 502px;
   height: 270px;
   opacity: 0.3;
+  box-shadow: 5px 5px 5px 5px var(--shadow);
   bottom: -300px;
   border-radius: 10px;
 }

@@ -33,7 +33,7 @@
   width: 583px;
   font-size: var(--font-size);
   line-height: 30px;
-  /* letter-spacing: 2px; */
+  letter-spacing: 2px;
   color: #ffffff;
   align-self: center;
 }

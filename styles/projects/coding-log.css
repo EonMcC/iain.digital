@@ -1,45 +1,101 @@
 #coding-log {
   width: 299px;
-  opacity: 1;
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  margin-top: 0;
 }
 
 #coding-log-text {
   width: 302px;
-  opacity: 1;
+  font-size: var(--font-size);
+  line-height: 30px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 0;
 }
 
 #coding-log-github {
-  width: 302px;
   font-size: 14px;
-  line-height: 30px;
-  letter-spacing: 2px;
   color: #ffffff;
   text-decoration: underline;
-  margin-top: 30px;
-  opacity: 1;
-  z-index: 0;
+  z-index: 10;
 }
 
 @media screen and (max-width: 1500px) {
   #coding-log-image {
-    width: 658px;
-    height: 531px;
+    width: 129px;
+    height: 255px;
     background: url(../../images/coding-log-image.png) no-repeat center;
     background-size: cover;
-    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
     opacity: 1;
     position: relative;
+  }
+  #coding-log-image:before {
+    content: "";
+    position: absolute;
+    width: 128px;
+    height: 255px;
+    background: url(../../images/coding-log-image-before.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    left: -120px;
+    top: 20px;
+    transform: rotate(-9.85deg);
+  }
+
+  #coding-log-image:after {
+    content: "";
+    position: absolute;
+    width: 128px;
+    height: 255px;
+    background: url(../../images/coding-log-image-after.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    right: -120px;
+    top: 20px;
+    transform: rotate(9.85deg);
+    z-index: -1;
   }
 }
 
 @media screen and (min-width: 1500px) {
   #coding-log-image {
-    width: 858px;
-    height: 731px;
+    width: 228px;
+    height: 454.23px;
     background: url(../../images/coding-log-image.png) no-repeat center;
     background-size: cover;
-    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
     opacity: 1;
     position: relative;
+    transform: rotate(9.85deg);
+  }
+  #coding-log-image:before {
+    content: "";
+    position: absolute;
+    width: 228px;
+    height: 454.23px;
+    background: url(../../images/coding-log-image-before.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    left: -220px;
+  }
+
+  #coding-log-image:after {
+    content: "";
+    position: absolute;
+    width: 228px;
+    height: 454.23px;
+    background: url(../../images/coding-log-image-after.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    right: -220px;
+    z-index: -1;
   }
 }

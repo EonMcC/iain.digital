@@ -5,14 +5,80 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectOne = document.getElementById("project-one-wrapper");
   const projectTwo = document.getElementById("project-two-wrapper");
 
+  // Project one swipe movement
+  projectOne.addEventListener("mousedown", downOne, false);
+  projectOne.addEventListener("mouseup", upOne, false);
+  projectOne.addEventListener("mousemove", dragOne, false);
+
+  let x0 = null;
+  let x1 = null;
+  let xCur = null;
+
+  function downOne(e) {
+    x0 = e.screenX;
+  }
+
+  function dragOne(e) {
+    xCur = e.screenX;
+    if (x0 !== null) {
+      projectOne.style.cssText = `transform: translateX(${xCur - x0}px);`;
+    }
+  }
+
+  function upOne(e) {
+    x1 = e.screenX;
+    if (x1 < x0 - 30) {
+      projectOne.style.cssText =
+        "transform: translateX(-100vw); transition: all 1s ease-out;";
+      projectTwo.style.cssText =
+        "transform: translateX(0); transition: all 1.5s ease-out;";
+    } else {
+      projectOne.style.cssText = `transform: translateX(0); transition: all .5s ease-out;`;
+    }
+    x0 = null;
+  }
+  // Project two swipe movement
+  projectTwo.addEventListener("mousedown", downTwo, false);
+  projectTwo.addEventListener("mouseup", upTwo, false);
+  projectTwo.addEventListener("mousemove", dragTwo, false);
+
+  let x20 = null;
+  let x21 = null;
+  let x2Cur = null;
+
+  function downTwo(e) {
+    x20 = e.screenX;
+  }
+
+  function dragTwo(e) {
+    x2Cur = e.screenX;
+    if (x20 !== null) {
+      projectTwo.style.cssText = `transform: translateX(${x2Cur - x20}px);`;
+    }
+  }
+
+  function upTwo(e) {
+    x21 = e.screenX;
+    if (x21 > x20 + 30) {
+      console.log("here");
+      projectOne.style.cssText =
+        "transform: translateX(0); transition: all 1.5s ease-out;";
+      projectTwo.style.cssText =
+        "transform: translateX(100vw); transition: all 1s ease-out;";
+    } else {
+      projectTwo.style.cssText = `transform: translateX(0); transition: all .5s ease-out;`;
+    }
+    x20 = null;
+  }
+
   const nextButton = document.querySelector(".next-arrow");
   nextButton.addEventListener("click", nextFn);
 
   function nextFn() {
     projectOne.style.cssText =
-      "left: -100vw; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
+      "transform: translateX(-100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
     projectTwo.style.cssText =
-      "left: 0; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+      "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
   }
 
   const previousButton = document.querySelector(".back-arrow");
@@ -20,101 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function previousFn() {
     projectOne.style.cssText =
-      "left: 0; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+      "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
     projectTwo.style.cssText =
-      "left: +100; transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-  }
-
-  function handleSuperTrumps(option) {
-    const superTrumpsArray = document.querySelectorAll(
-      "#super-trumps, #super-trumps-text, #super-trumps-github, #super-trumps-image"
-    );
-    if (option === "show") {
-      superTrumpsArray.forEach(
-        (e) =>
-          (e.style.cssText =
-            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
-      );
-      document.getElementById("super-trumps-image").style.position = "relative";
-    } else {
-      superTrumpsArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; z-index: 0;")
-      );
-      document.getElementById("super-trumps-image").style.cssText =
-        "opacity: 0; position: absolute;";
-    }
-  }
-  function handleCodingLog(option) {
-    const codingLogArray = document.querySelectorAll(
-      "#coding-log, #coding-log-text, #coding-log-github, #coding-log-image"
-    );
-    if (option === "show") {
-      codingLogArray.forEach(
-        (e) =>
-          (e.style.cssText =
-            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
-      );
-      document.getElementById("coding-log-image").style.position = "relative";
-    } else {
-      codingLogArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; z-index: 0;")
-      );
-      document.getElementById("coding-log-image").style.cssText =
-        "opacity: 0; position: absolute;";
-    }
-  }
-  function handlePycp(option) {
-    const pycpArray = document.querySelectorAll(
-      "#pycp, #pycp-text, #pycp-github, #pycp-image"
-    );
-    if (option === "show") {
-      pycpArray.forEach(
-        (e) =>
-          (e.style.cssText =
-            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
-      );
-      document.getElementById("pycp-image").style.position = "relative";
-    } else {
-      pycpArray.forEach((e) => (e.style.cssText = "opacity: 0; z-index: 0;"));
-      document.getElementById("pycp-image").style.cssText =
-        "opacity: 0; position: absolute;";
-    }
-  }
-  function handleJPark(option) {
-    const jParkArray = document.querySelectorAll(
-      "#j-park, #j-park-text, #j-park-github, #j-park-image"
-    );
-    if (option === "show") {
-      jParkArray.forEach(
-        (e) =>
-          (e.style.cssText =
-            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
-      );
-      document.getElementById("j-park-image").style.position = "relative";
-    } else {
-      jParkArray.forEach((e) => (e.style.cssText = "opacity: 0; z-index: 0;"));
-      document.getElementById("j-park-image").style.cssText =
-        "opacity: 0; position: absolute;";
-    }
-  }
-  function handleTravucket(option) {
-    const travucketArray = document.querySelectorAll(
-      "#travucket, #travucket-text, #travucket-github, #travucket-image"
-    );
-    if (option === "show") {
-      travucketArray.forEach(
-        (e) =>
-          (e.style.cssText =
-            "opacity: 1; transition: all 1.5s ease-in; z-index:10;")
-      );
-      document.getElementById("travucket-image").style.position = "relative";
-    } else {
-      travucketArray.forEach(
-        (e) => (e.style.cssText = "opacity: 0; z-index: 0;")
-      );
-      document.getElementById("travucket-image").style.cssText =
-        "opacity: 0; position: absolute;";
-    }
+      "transform: translateX(100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
   }
 
   const downArrowTop = document.querySelector(".back-arrow");
@@ -261,7 +235,7 @@ function arrowMoveTop(arrowToMove, x, y, superTrumpsImage) {
   superTrumpsImage.style.cssText =
     "opacity: 1; transition: opacity 2s ease-in-out; ";
   arrowToMove.style.cssText = `
-    left: calc(${x}px - 62.5px);
+    left: calc(${x}px - 50px);
     top: ${y}px;
     
     transform: rotate(90deg);
@@ -281,7 +255,7 @@ function reverseArrowMoveTop(arrowToMove, x, y, superTrumpsImage) {
 
 function arrowMoveBottom(arrowToMove, x, y) {
   arrowToMove.style.cssText = `
-    left: ${x}px;
+    left: calc(${x}px - 50px);
     top: ${y}px;
     
     transform: rotate(-90deg);
