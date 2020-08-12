@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectOne = document.getElementById("project-one-wrapper");
   const projectTwo = document.getElementById("project-two-wrapper");
 
+  projectCurShowing = "projectOne";
+
   // Project one swipe movement
   projectOne.addEventListener("mousedown", downOne, false);
   projectOne.addEventListener("mouseup", upOne, false);
@@ -27,13 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function upOne(e) {
     x1 = e.screenX;
-    if (x1 < x0 - 30) {
+    if (x1 < x0) {
       projectOne.style.cssText =
         "transform: translateX(-100vw); transition: all 1s ease-out;";
-      projectTwo.style.cssText =
-        "transform: translateX(0); transition: all 1.5s ease-out;";
+      projectTwo.style.cssText = "transform: translateX(100);";
+      setTimeout(function () {
+        projectTwo.style.cssText =
+          "transform: translateX(0); transition: all 1.5s ease-out;";
+      }, 100);
     } else {
-      projectOne.style.cssText = `transform: translateX(0); transition: all .5s ease-out;`;
+      projectOne.style.cssText =
+        "transform: translateX(100vw); transition: all 1s ease-out;";
+      projectTwo.style.cssText = "transform: translateX(-100vw);";
+      setTimeout(function () {
+        projectTwo.style.cssText =
+          "transform: translateX(0); transition: all 1.5s ease-out;";
+      }, 100);
     }
     x0 = null;
   }
@@ -59,18 +70,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function upTwo(e) {
     x21 = e.screenX;
-    if (x21 > x20 + 30) {
-      projectOne.style.cssText =
-        "transform: translateX(0); transition: all 1.5s ease-out;";
+    if (x21 < x20) {
+      projectOne.style.cssText = "transform: translateX(100vw);";
+      setTimeout(function () {
+        projectOne.style.cssText =
+          "transform: translateX(0); transition: all 1.5s ease-out;";
+      }, 100);
+      projectTwo.style.cssText =
+        "transform: translateX(-100vw); transition: all 1.5s ease-out;";
+    } else {
+      projectOne.style.cssText = "transform: translateX(-100vw);";
+      setTimeout(function () {
+        projectOne.style.cssText =
+          "transform: translateX(0); transition: all 1.5s ease-out;";
+      }, 100);
       projectTwo.style.cssText =
         "transform: translateX(100vw); transition: all 1s ease-out;";
-    } else {
-      projectTwo.style.cssText = `transform: translateX(0); transition: all .5s ease-out;`;
     }
     x20 = null;
   }
-
-  projectCurShowing = "projectOne";
 
   function moveOrder(direction) {
     if (direction === "next") {
