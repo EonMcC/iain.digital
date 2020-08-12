@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function upTwo(e) {
     x21 = e.screenX;
     if (x21 > x20 + 30) {
-      console.log("here");
       projectOne.style.cssText =
         "transform: translateX(0); transition: all 1.5s ease-out;";
       projectTwo.style.cssText =
@@ -71,24 +70,63 @@ document.addEventListener("DOMContentLoaded", () => {
     x20 = null;
   }
 
+  projectCurShowing = "projectOne";
+
+  function moveOrder(direction) {
+    if (direction === "next") {
+      if (projectCurShowing === "projectOne") {
+        projectOne.style.cssText =
+          "transform: translateX(-100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
+        projectTwo.style.cssText =
+          "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        projectCurShowing = "projectTwo";
+      } else {
+        projectOne.style.cssText = "transform: translateX(100vw);";
+        setTimeout(function () {
+          projectOne.style.cssText =
+            "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        }, 100);
+        projectTwo.style.cssText =
+          "transform: translateX(-100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        setTimeout(function () {
+          projectTwo.style.cssText = "transform: translateX(100vw);";
+        }, 1500);
+        projectCurShowing = "projectOne";
+      }
+    } else {
+      if (projectCurShowing === "projectOne") {
+        projectOne.style.cssText =
+          "transform: translateX(100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        projectTwo.style.cssText = "transform: translateX(-100vw);";
+        setTimeout(function () {
+          projectTwo.style.cssText =
+            "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        }, 100);
+        projectCurShowing = "projectTwo";
+      } else {
+        projectOne.style.cssText = "transform: translateX(-100vw);";
+        setTimeout(function () {
+          projectOne.style.cssText =
+            "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        }, 100);
+        projectTwo.style.cssText =
+          "transform: translateX(100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+        projectCurShowing = "projectOne";
+      }
+    }
+  }
+
   const nextButton = document.querySelector(".next-arrow");
   nextButton.addEventListener("click", nextFn);
-
   function nextFn() {
-    projectOne.style.cssText =
-      "transform: translateX(-100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
-    projectTwo.style.cssText =
-      "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+    moveOrder("next");
   }
 
   const previousButton = document.querySelector(".back-arrow");
   previousButton.addEventListener("click", previousFn);
 
   function previousFn() {
-    projectOne.style.cssText =
-      "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-    projectTwo.style.cssText =
-      "transform: translateX(100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
+    moveOrder("previous");
   }
 
   const downArrowTop = document.querySelector(".back-arrow");
