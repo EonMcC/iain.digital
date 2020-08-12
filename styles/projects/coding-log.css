@@ -25,8 +25,8 @@
 
 @media screen and (max-width: 1500px) {
   #coding-log-image {
-    width: 129px;
-    height: 255px;
+    width: 180.6px;
+    height: 357px;
     background: url(../../images/coding-log-image.png) no-repeat center;
     background-size: cover;
     box-shadow: 5px 5px 5px 5px var(--shadow);
@@ -36,13 +36,13 @@
   #coding-log-image:before {
     content: "";
     position: absolute;
-    width: 128px;
-    height: 255px;
+    width: 180.6px;
+    height: 357px;
     background: url(../../images/coding-log-image-before.png) no-repeat center;
     background-size: cover;
     box-shadow: 5px 5px 5px 5px var(--shadow);
     opacity: 1;
-    left: -120px;
+    left: -130px;
     top: 20px;
     transform: rotate(-9.85deg);
   }
@@ -50,13 +50,13 @@
   #coding-log-image:after {
     content: "";
     position: absolute;
-    width: 128px;
-    height: 255px;
+    width: 180.6px;
+    height: 357px;
     background: url(../../images/coding-log-image-after.png) no-repeat center;
     background-size: cover;
     box-shadow: 5px 5px 5px 5px var(--shadow);
     opacity: 1;
-    right: -120px;
+    right: -130px;
     top: 20px;
     transform: rotate(9.85deg);
     z-index: -1;
