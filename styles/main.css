@@ -46,18 +46,21 @@ body {
 }
 #heading-wrapper > * {
   letter-spacing: 5px;
-  color: var(--light);
   margin: 0;
 }
 
 #main-heading {
   font-weight: 500;
-  font-size: 72px;
+  font-size: 80px;
+  color: var(--light);
+  margin-left: -4px;
 }
 
 #sub-heading {
   font-weight: 200;
-  font-size: 40px;
+  font-size: 30px;
+  margin-top: -10px;
+  color: var(--main);
 }
 
 .scroll-arrows {
