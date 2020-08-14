@@ -89,7 +89,7 @@
   }
 
   #languages {
-    color: var(--light);
+    color: var(--background);
     line-height: inherit;
     font-weight: 200;
     position: absolute;
@@ -98,22 +98,18 @@
 
   #blob-two {
     position: absolute;
-    width: 863px;
-    height: 570px;
-    left: 272px;
-    top: none;
-    opacity: 1;
+    left: -1vw;
+    width: 90vw;
+    height: 70px;
+    border-radius: 5px;
+    top: 109px;
+    opacity: 0;
 
     background: linear-gradient(
       -135deg,
       rgba(67, 115, 141, 1) 100%,
       rgba(104, 137, 150, 1) 0%
     );
-    border-radius: 285px;
     box-shadow: -10px 10px 10px 5px var(--shadow);
-  }
-
-  #indv-languages-wrapper {
-    transform: translateX(-60px);
   }
 }

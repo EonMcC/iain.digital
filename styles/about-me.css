@@ -72,7 +72,7 @@
   }
 
   #blob {
-    opacity: 1;
+    opacity: 0;
     position: absolute;
     width: 863px;
     height: 570px;

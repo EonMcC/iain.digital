@@ -127,6 +127,19 @@ body {
   }
 
   #el-to-move {
-    opacity: 0;
+    opacity: 1;
+    position: absolute;
+    width: 863px;
+    height: 570px;
+    left: -489px;
+    top: 29px;
+
+    background: linear-gradient(
+      135deg,
+      rgba(104, 137, 150, 1) 0%,
+      rgba(67, 115, 141, 1) 100%
+    );
+    border-radius: 285px;
+    box-shadow: 10px 10px 10px 5px var(--shadow);
   }
 }

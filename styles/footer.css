@@ -55,7 +55,19 @@ footer > * {
 
 @media (max-width: 1000px) {
   footer > * {
-    padding: 2%;
+    padding: 0;
     margin: 0;
+  }
+
+  .info {
+    padding: 3% 4%;
+  }
+
+  .credits {
+    padding: 3% 0;
+  }
+
+  .links {
+    padding: 3% 4%;
   }
 }
