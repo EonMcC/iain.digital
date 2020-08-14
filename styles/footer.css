@@ -41,15 +41,21 @@ footer > * {
 }
 
 .dual-text-wrapper {
-  display: flex;
+  /* display: flex; */
 }
 
 .dual-text-wrapper > * {
-  width: 50%;
   padding: 0 10px 5px 0;
   margin: 0px;
 }
 
 .links .footer-content {
   text-decoration: line-through;
+}
+
+@media (max-width: 1000px) {
+  footer > * {
+    padding: 2%;
+    margin: 0;
+  }
 }

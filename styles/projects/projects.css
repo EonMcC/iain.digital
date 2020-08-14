@@ -67,3 +67,44 @@
 .arrows {
   opacity: 0;
 }
+
+@media (max-width: 1000px) {
+  #projects-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #project-left-wrapper {
+    display: block;
+    border: red solid 2px;
+  }
+
+  #project-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 5vw;
+  }
+
+  #project-right-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: green solid 2px;
+  }
+
+  #project-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  #arrow-cell {
+    display: none;
+  }
+  .arrows {
+    display: none;
+  }
+}

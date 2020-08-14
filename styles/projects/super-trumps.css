@@ -23,6 +23,12 @@
   z-index: 10;
 }
 
+@media (max-width: 1000px) {
+  #super-trumps-text {
+    width: 90vw;
+  }
+}
+
 @media (max-width: 1500px) {
   .super-trumps-image {
     width: 451.8px;

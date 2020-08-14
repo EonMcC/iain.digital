@@ -48,3 +48,37 @@
 .contact-details-links *:hover {
   color: white;
 }
+
+@media (max-width: 1000px) {
+  #contact-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #contact-details-container {
+    width: 100vw;
+    display: flex;
+  }
+
+  #polaroids {
+    width: 200px;
+    height: 266px;
+  }
+
+  .contact-details {
+    margin-left: 25px;
+  }
+
+  .contact-details * {
+    font-size: 18px;
+  }
+
+  .contact-details-title {
+    text-align: right;
+    font-weight: bold;
+    color: var(--main);
+  }
+}
