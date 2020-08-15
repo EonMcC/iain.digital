@@ -24,12 +24,21 @@
 }
 
 @media (max-width: 1000px) {
-  #super-trumps-text {
-    width: 90vw;
+  .super-trumps-image {
+    width: 361.44px;
+    height: 194.4px;
+    background: url(../../images/super-trumps2.png) no-repeat center;
+    background-size: contain;
+    border-radius: 10px;
+    opacity: 1;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    transform: rotate(9.85deg);
+    overflow: visible;
+    opacity: 1;
   }
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1000px) {
   .super-trumps-image {
     width: 451.8px;
     height: 243px;

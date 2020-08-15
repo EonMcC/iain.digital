@@ -23,7 +23,48 @@
   z-index: 10;
 }
 
-@media screen and (max-width: 1500px) {
+@media (max-width: 1000px) {
+  #coding-log-image {
+    width: 137.25px;
+    height: 271.32px;
+    background: url(../../images/coding-log-image.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    position: relative;
+  }
+  #coding-log-image:before {
+    content: "";
+    position: absolute;
+    width: 137.25px;
+    height: 271.32px;
+    background: url(../../images/coding-log-image-before.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    left: -120px;
+    top: 20px;
+    /* transform: rotate(-9.85deg); */
+    z-index: -1;
+  }
+
+  #coding-log-image:after {
+    content: "";
+    position: absolute;
+    width: 137.25px;
+    height: 271.32px;
+    background: url(../../images/coding-log-image-after.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px var(--shadow);
+    opacity: 1;
+    right: -120px;
+    top: 20px;
+    /* transform: rotate(9.85deg); */
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
   #coding-log-image {
     width: 180.6px;
     height: 357px;
