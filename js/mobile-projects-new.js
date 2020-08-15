@@ -4,30 +4,23 @@ if (document.documentElement.clientWidth < 1000) {
     const projectTwo = document.getElementById("project-two-wrapper");
 
     //Back btn move to pos
-    const backBtnMobile = document.querySelector(".back-btn-mobile");
-    const backBtnTextMobile = document.querySelector(".back-btn-text-mobile");
-    const backBtnTextMobileLeft = backBtnTextMobile.getBoundingClientRect()
-      .left;
-    const backBtnTextMobileTop =
-      backBtnTextMobile.getBoundingClientRect().top + pageYOffset;
-    const backBtnTextMobileActual = document.querySelector(
+    const btnContainer = document.querySelector(".btn-container");
+    const btnContainerLeft = btnContainer.getBoundingClientRect().left;
+    const btnContainerTop =
+      btnContainer.getBoundingClientRect().top + pageYOffset + 50;
+    const btnContainerActual = document.querySelector(".btn-container-actual");
+
+    btnContainerActual.style.cssText = `top: ${btnContainerTop}px; left: ${btnContainerLeft}px;`;
+
+    const backBtnMobile = document.querySelector(".back-btn-mobile-actual");
+    const backBtnTextMobile = document.querySelector(
       ".back-btn-text-mobile-actual"
     );
 
-    backBtnTextMobileActual.style.cssText = `top: ${backBtnTextMobileTop}px; left: ${backBtnTextMobileLeft}px;`;
-
-    //Next btn move to pos
-    const nextBtnMobile = document.querySelector(".next-btn-mobile");
-    const nextBtnTextMobile = document.querySelector(".next-btn-text-mobile");
-    const nextBtnTextMobileLeft = nextBtnTextMobile.getBoundingClientRect()
-      .left;
-    const nextBtnTextMobileTop =
-      nextBtnTextMobile.getBoundingClientRect().top + pageYOffset;
-    const nextBtnTextMobileActual = document.querySelector(
+    const nextBtnMobile = document.querySelector(".next-btn-mobile-actual");
+    const nextBtnTextMobile = document.querySelector(
       ".next-btn-text-mobile-actual"
     );
-
-    nextBtnTextMobileActual.style.cssText = `top: ${nextBtnTextMobileTop}px; left: ${nextBtnTextMobileLeft}px;`;
 
     backBtnMobile.addEventListener("touchend", back, false);
     nextBtnMobile.addEventListener("touchend", next, false);
