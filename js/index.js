@@ -162,7 +162,7 @@ if (document.documentElement.clientWidth > 1000) {
       .querySelector("#sub-heading")
       .getBoundingClientRect().top;
 
-    const superTrumpsImage = document.querySelector(".super-trumps-image");
+    const superTrumpsImage = document.querySelector("#super-trumps-image");
     const codinglogImage = document.querySelector("#coding-log-image");
 
     const backArrows = document.querySelector(".back-arrows");

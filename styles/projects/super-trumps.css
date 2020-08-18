@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 1000px) {
-  .super-trumps-image {
+  #super-trumps-image {
     width: 361.44px;
     height: 194.4px;
     background: url(../../images/super-trumps2.png) no-repeat center;
@@ -32,14 +32,14 @@
     border-radius: 10px;
     opacity: 1;
     box-shadow: 5px 5px 5px 5px var(--shadow);
-    transform: rotate(9.85deg);
+    /* transform: rotate(9.85deg); */
     overflow: visible;
     opacity: 1;
   }
 }
 
 @media (min-width: 1000px) {
-  .super-trumps-image {
+  #super-trumps-image {
     width: 451.8px;
     height: 243px;
     background: url(../../images/super-trumps2.png) no-repeat center;
@@ -52,7 +52,7 @@
     opacity: 0;
   }
 
-  .super-trumps-image:before {
+  #super-trumps-image:before {
     content: "";
     position: absolute;
     background: url(../../images/super-trumps00.png) no-repeat center;
@@ -64,7 +64,7 @@
     top: -275px;
     border-radius: 10px;
   }
-  .super-trumps-image:after {
+  #super-trumps-image:after {
     content: "";
     position: absolute;
     background: url(../../images/super-trumps.png) no-repeat center;
@@ -79,7 +79,7 @@
 }
 
 @media (min-width: 1500px) {
-  .super-trumps-image {
+  #super-trumps-image {
     width: 502px;
     height: 270px;
     background: url(../../images/super-trumps2.png) no-repeat center;
@@ -92,7 +92,7 @@
     opacity: 0;
   }
 
-  .super-trumps-image:before {
+  #super-trumps-image:before {
     content: "";
     position: absolute;
     background: url(../../images/super-trumps00.png) no-repeat center;
@@ -104,7 +104,7 @@
     top: -300px;
     border-radius: 10px;
   }
-  .super-trumps-image:after {
+  #super-trumps-image:after {
     content: "";
     position: absolute;
     background: url(../../images/super-trumps.png) no-repeat center;

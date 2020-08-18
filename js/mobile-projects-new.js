@@ -1,68 +1,96 @@
 if (document.documentElement.clientWidth < 1000) {
   document.addEventListener("DOMContentLoaded", () => {
-    const projectOne = document.getElementById("project-one-wrapper");
-    const projectTwo = document.getElementById("project-two-wrapper");
+    const superTrumps = document.querySelector("#super-trumps");
+    const superTrumpsText = document.querySelector("#super-trumps-text");
+    const superTrumpsImage = document.querySelector("#super-trumps-image");
+    const superProjectArray = [superTrumpsText, superTrumps, superTrumpsImage];
 
-    //Back btn move to pos
-    const btnContainer = document.querySelector(".btn-container");
-    const btnContainerLeft = btnContainer.getBoundingClientRect().left;
-    const btnContainerTop =
-      btnContainer.getBoundingClientRect().top + pageYOffset + 50;
-    const btnContainerActual = document.querySelector(".btn-container-actual");
+    const codingLog = document.getElementById("coding-log");
+    const codingLogText = document.getElementById("coding-log-text");
+    const codingLogImage = document.getElementById("coding-log-image");
+    const codingProjectArray = [codingLog, codingLogText, codingLogImage];
 
-    btnContainerActual.style.cssText = `top: ${btnContainerTop}px; left: ${btnContainerLeft}px;`;
+    let currentProjectArray = superProjectArray;
 
-    const backBtnMobile = document.querySelector(".back-btn-mobile-actual");
-    const backBtnTextMobile = document.querySelector(
-      ".back-btn-text-mobile-actual"
-    );
+    const projectTwoWrapper = document.getElementById("project-two-wrapper");
 
-    const nextBtnMobile = document.querySelector(".next-btn-mobile-actual");
-    const nextBtnTextMobile = document.querySelector(
-      ".next-btn-text-mobile-actual"
-    );
+    const backBtnMobile = document.querySelector(".back-btn-mobile");
+    const backBtnTextMobile = document.querySelector(".back-btn-text-mobile");
+
+    const nextBtnMobile = document.querySelector(".next-btn-mobile");
+    const nextBtnTextMobile = document.querySelector(".next-btn-text-mobile");
 
     backBtnMobile.addEventListener("touchend", back, false);
+
     nextBtnMobile.addEventListener("touchend", next, false);
     backBtnTextMobile.addEventListener("touchend", back, false);
     nextBtnTextMobile.addEventListener("touchend", next, false);
 
-    function back() {
-      console.log("back");
-      projectOne.style.cssText =
-        "transform: translate(-100vw); opacity: 1; z-index: 10; transition: all 1s ease-out;";
+    function next() {
+      const firstArray = currentProjectArray;
+      firstArray.forEach((object) => {
+        object.style.cssText =
+          "transform: translate(-100vw); opacity: 1; z-index: 10; transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
+      });
+
+      projectTwoWrapper.style.cssText = "opacity: 1;";
 
       setTimeout(function () {
-        projectOne.style.cssText =
-          "transform: translate(0vw); opacity: 0; z-index: -1;";
+        firstArray.forEach((object) => {
+          object.style.cssText =
+            "transform: translate(0vw); opacity: 0; z-index: -1;";
+        });
       }, 1000);
 
-      projectTwo.style.cssText =
-        "transform: translate(-100vw); opacity: 1; z-index: 10;";
+      currentProjectArray === superProjectArray
+        ? (currentProjectArray = codingProjectArray)
+        : (currentProjectArray = superProjectArray);
+
+      currentProjectArray.forEach((object) => {
+        object.style.cssText = "transform: translate(100vw); opacity: 1;";
+      });
 
       setTimeout(function () {
-        projectTwo.style.cssText =
-          "transform: translate(0vw); opacity: 1; z-index: 10;  transition: all 1s ease-out;";
-      }, 100);
+        currentProjectArray.forEach((object) => {
+          object.style.cssText =
+            "transform: translate(0vw); opacity: 1; z-index: 10;  transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
+        });
+      }, 200);
     }
 
-    function next() {
-      console.log("next");
-      projectOne.style.cssText =
-        "transform: translate(-100vw); opacity: 1; z-index: 10; transition: all 1s ease-out;";
+    function back() {
+      const firstArray = currentProjectArray;
+      firstArray.forEach((object) => {
+        object.style.cssText =
+          "transform: translate(100vw); opacity: 1; z-index: 10; transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
+      });
+
+      projectTwoWrapper.style.cssText = "opacity: 1;";
 
       setTimeout(function () {
-        projectOne.style.cssText =
-          "transform: translate(0vw); opacity: 0; z-index: -1;";
+        console.log("here");
+        firstArray.forEach((object) => {
+          object.style.cssText =
+            "transform: translate(0vw); opacity: 0; z-index: -1; background: green;";
+        });
       }, 1000);
 
-      projectTwo.style.cssText =
-        "transform: translate(100vw); opacity: 1; z-index: 10;";
+      console.log("here2");
+      currentProjectArray === superProjectArray
+        ? (currentProjectArray = codingProjectArray)
+        : (currentProjectArray = superProjectArray);
+
+      currentProjectArray.forEach((object) => {
+        object.style.cssText =
+          "transform: translate(-100vw); opacity: 1; z-index: 10;";
+      });
 
       setTimeout(function () {
-        projectTwo.style.cssText =
-          "transform: translate(0vw); opacity: 1; z-index: 10;  transition: all 1s ease-out;";
-      }, 1000);
+        currentProjectArray.forEach((object) => {
+          object.style.cssText =
+            "transform: translate(0vw); opacity: 1; z-index: 10;  transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
+        });
+      }, 200);
     }
   });
 }
