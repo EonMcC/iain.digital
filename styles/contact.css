@@ -35,7 +35,7 @@
 .contact-details * {
   font-size: 24px;
   letter-spacing: 2px;
-  color: var(--dark);
+  color: var(--background);
   z-index: 10;
   text-decoration: none;
 }

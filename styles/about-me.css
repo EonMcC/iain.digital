@@ -23,10 +23,10 @@
   width: 299px;
   font-size: 55px;
   letter-spacing: 5px;
-  color: var(--dark);
+  color: var(--background);
   margin-left: 212px;
   z-index: 1;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 #hello {

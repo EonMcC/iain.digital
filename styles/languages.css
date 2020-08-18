@@ -22,11 +22,11 @@
 
 #languages {
   font-size: 55px;
-  color: var(--dark);
+  color: var(--background);
   line-height: 570px;
   letter-spacing: 5px;
   z-index: 1;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 #javascript {
