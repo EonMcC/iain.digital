@@ -68,11 +68,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 5px;
       transition: all 2s;
 
-      background: linear-gradient(
-        -135deg,
-        rgba(104, 137, 150, 1) 0%,
-        rgba(67, 115, 141, 1) 70%  
-      );
+      background: var(--linGrad);
       box-shadow: -10px 10px 10px 5px var(--shadow);`;
     }
 
@@ -85,11 +81,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 285px;
       transition: all 2s;
       
-      background: linear-gradient(
-        135deg,
-        rgba(104, 137, 150, 1) 0%,
-        rgba(67, 115, 141, 1) 100%
-      );
+      background: var(--linGrad);
       box-shadow: 10px 10px 10px 5px var(--shadow);`;
     }
 
@@ -102,11 +94,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 50px;
       transition: all 2s;
 
-      background: linear-gradient(
-        225deg,
-        rgba(104, 137, 150, 1) 0%,
-        rgba(67, 115, 141, 1) 70%  
-      );
+      background: var(--linGrad);
       box-shadow: -10px 10px 10px 5px var(--shadow);`;
     }
 
@@ -119,11 +107,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 5px;
       transition: all 2s;
       
-      background: linear-gradient(
-        -135deg,
-        rgba(104, 137, 150, 1) 0%,
-        rgba(67, 115, 141, 1) 100%
-      );
+      background: var(--linGrad);
       box-shadow: 10px 10px 10px 5px var(--shadow);`;
     }
   });

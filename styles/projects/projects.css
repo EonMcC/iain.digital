@@ -82,7 +82,28 @@
   display: none;
 }
 
+#blob-zero {
+  display: none;
+}
+
 @media (max-width: 1000px) {
+  #blob-zero {
+    display: block;
+    width: 370px;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+    transform: rotate(-5deg);
+
+    background: linear-gradient(
+      -135deg,
+      rgba(104, 137, 150, 1) 0%,
+      rgba(67, 115, 141, 1) 70%
+    );
+    box-shadow: -10px 10px 10px 5px var(--shadow);
+  }
+
   #projects-wrapper {
     display: flex;
     flex-direction: column-reverse;

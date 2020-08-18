@@ -26,6 +26,12 @@ if (document.documentElement.clientWidth < 1000) {
     backBtnTextMobile.addEventListener("touchend", back, false);
     nextBtnTextMobile.addEventListener("touchend", next, false);
 
+    const blobZero = document.getElementById("blob-zero");
+    blobZeroSuperDimensions =
+      "width: 370px; height: 200px; transition: all 1s;";
+    blobZeroCodingDimensions =
+      "width: 129.8px; height: 259.2px; transition: all 1s;";
+
     function next() {
       const firstArray = currentProjectArray;
       firstArray.forEach((object) => {
@@ -42,9 +48,13 @@ if (document.documentElement.clientWidth < 1000) {
         });
       }, 1000);
 
-      currentProjectArray === superProjectArray
-        ? (currentProjectArray = codingProjectArray)
-        : (currentProjectArray = superProjectArray);
+      if (currentProjectArray === superProjectArray) {
+        blobZero.style.cssText = blobZeroCodingDimensions;
+        currentProjectArray = codingProjectArray;
+      } else {
+        blobZero.style.cssText = blobZeroSuperDimensions;
+        currentProjectArray = superProjectArray;
+      }
 
       currentProjectArray.forEach((object) => {
         object.style.cssText = "transform: translate(100vw); opacity: 1;";
