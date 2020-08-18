@@ -89,18 +89,14 @@
 @media (max-width: 1000px) {
   #blob-zero {
     display: block;
-    width: 370px;
-    height: 200px;
+    width: 343.36px;
+    height: 184.68px;
     position: absolute;
     z-index: -1;
     border-radius: 10px;
     transform: rotate(-5deg);
 
-    background: linear-gradient(
-      -135deg,
-      rgba(104, 137, 150, 1) 0%,
-      rgba(67, 115, 141, 1) 70%
-    );
+    background: var(--linGrad);
     box-shadow: -10px 10px 10px 5px var(--shadow);
   }
 
@@ -125,15 +121,16 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 6fr 1fr;
     overflow-x: hidden;
   }
 
   #project-image-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     pointer-events: none;
+    margin-bottom: 12%;
   }
 
   #arrow-cell {

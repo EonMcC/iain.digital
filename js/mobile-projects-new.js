@@ -28,9 +28,9 @@ if (document.documentElement.clientWidth < 1000) {
 
     const blobZero = document.getElementById("blob-zero");
     blobZeroSuperDimensions =
-      "width: 370px; height: 200px; transition: all 1s;";
+      "width: 343.36px; height: 184.68; transition: all 1s;";
     blobZeroCodingDimensions =
-      "width: 129.8px; height: 259.2px; transition: all 1s;";
+      "transform: translateY(20px) rotate(-5deg); width: 129.8px; height: 259.2px; transition: all 1s;";
 
     function next() {
       const firstArray = currentProjectArray;
@@ -85,10 +85,13 @@ if (document.documentElement.clientWidth < 1000) {
         });
       }, 1000);
 
-      console.log("here2");
-      currentProjectArray === superProjectArray
-        ? (currentProjectArray = codingProjectArray)
-        : (currentProjectArray = superProjectArray);
+      if (currentProjectArray === superProjectArray) {
+        blobZero.style.cssText = blobZeroCodingDimensions;
+        currentProjectArray = codingProjectArray;
+      } else {
+        blobZero.style.cssText = blobZeroSuperDimensions;
+        currentProjectArray = superProjectArray;
+      }
 
       currentProjectArray.forEach((object) => {
         object.style.cssText =

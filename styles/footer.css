@@ -59,6 +59,14 @@ footer > * {
     margin: 0;
   }
 
+  .footer-content {
+    letter-spacing: 1px;
+  }
+
+  .footer-title {
+    font-size: 30px;
+  }
+
   .info {
     padding: 3% 4%;
   }

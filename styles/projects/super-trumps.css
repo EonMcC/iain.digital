@@ -25,8 +25,8 @@
 
 @media (max-width: 1000px) {
   #super-trumps-image {
-    width: 361.44px;
-    height: 194.4px;
+    width: 343.36px;
+    height: 184.68px;
     background: url(../../images/super-trumps2.png) no-repeat center;
     background-size: contain;
     border-radius: 10px;
@@ -35,6 +35,10 @@
     /* transform: rotate(9.85deg); */
     overflow: visible;
     opacity: 1;
+  }
+
+  #super-trumps {
+    margin: 0 0 0.1em 0;
   }
 }
 
