@@ -25,10 +25,10 @@
 
 @media (max-width: 1000px) {
   #super-trumps-image {
-    width: 343.36px;
-    height: 184.68px;
+    width: 90%;
+    height: 180px;
     background: url(../../images/super-trumps2.png) no-repeat center;
-    background-size: contain;
+    background-size: cover;
     border-radius: 10px;
     opacity: 1;
     box-shadow: 5px 5px 5px 5px var(--shadow);

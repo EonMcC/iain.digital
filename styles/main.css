@@ -30,7 +30,7 @@
   }
 }
 #landing-page {
-  height: 100vh;
+  height: 105vh;
   width: 100vw;
   display: relative;
 }
@@ -41,7 +41,7 @@ h3 {
 
 body {
   background-color: var(--background);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: Avenir;

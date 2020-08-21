@@ -25,8 +25,8 @@
 
 @media (max-width: 1000px) {
   #coding-log-image {
-    width: 129.8px;
-    height: 259.2px;
+    width: 100%;
+    height: 250px;
     background: url(../../images/coding-log-phone2.png) no-repeat center;
     background-size: contain;
     /* box-shadow: 5px 5px 5px 5px var(--shadow); */

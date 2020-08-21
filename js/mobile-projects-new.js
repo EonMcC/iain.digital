@@ -8,6 +8,8 @@ if (document.documentElement.clientWidth < 1000) {
     const codingLog = document.getElementById("coding-log");
     const codingLogText = document.getElementById("coding-log-text");
     const codingLogImage = document.getElementById("coding-log-image");
+    // const codingLogImageWidth = codingLogImage.offsetWidth;
+    const codingLogImageHeight = codingLogImage.offsetHeight;
     const codingProjectArray = [codingLog, codingLogText, codingLogImage];
 
     let currentProjectArray = superProjectArray;
@@ -29,8 +31,7 @@ if (document.documentElement.clientWidth < 1000) {
     const blobZero = document.getElementById("blob-zero");
     blobZeroSuperDimensions =
       "width: 343.36px; height: 184.68; transition: all 1s;";
-    blobZeroCodingDimensions =
-      "transform: translateY(20px) rotate(-5deg); width: 129.8px; height: 259.2px; transition: all 1s;";
+    blobZeroCodingDimensions = `transform: translateY(15px) rotate(-5deg); width: 129.8px; height: 225px; transition: all 1s;`;
 
     function next() {
       const firstArray = currentProjectArray;
