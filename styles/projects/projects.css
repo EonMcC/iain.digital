@@ -8,8 +8,6 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  cursor: grab;
-  user-select: none;
   opacity: 1;
   z-index: 10;
 }
@@ -17,9 +15,8 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  cursor: grab;
-  user-select: none;
-  opacity: 0;
+  opacity: 1;
+  transform: translateX(100vw);
 }
 
 #projects-wrapper {
@@ -91,7 +88,27 @@
     height: 110vh;
   }
 
+  #project-two-wrapper {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  #blob-super {
+    opacity: 0;
+    display: block;
+    width: 343.36px;
+    height: 184.68px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+    transform: rotate(-5deg);
+
+    background: var(--linGrad);
+    box-shadow: -10px 10px 10px 5px var(--shadow);
+  }
+
   #blob-zero {
+    opacity: 1;
     display: block;
     width: 343.36px;
     height: 184.68px;

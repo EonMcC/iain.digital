@@ -1,95 +1,9 @@
 if (document.documentElement.clientWidth > 1000) {
-  const startY = window.pageYOffset;
-  let moveTo = 0;
-
   document.addEventListener("DOMContentLoaded", () => {
     const projectOne = document.getElementById("project-one-wrapper");
     const projectTwo = document.getElementById("project-two-wrapper");
 
     projectCurShowing = "projectOne";
-
-    // Project one swipe movement
-    projectOne.addEventListener("mousedown", downOne, false);
-    projectOne.addEventListener("mouseup", upOne, false);
-    projectOne.addEventListener("mousemove", dragOne, false);
-
-    let x0 = null;
-    let x1 = null;
-    let xCur = null;
-
-    function downOne(e) {
-      x0 = e.screenX;
-    }
-
-    function dragOne(e) {
-      xCur = e.screenX;
-      if (x0 !== null) {
-        projectOne.style.cssText = `transform: translateX(${xCur - x0}px);`;
-      }
-    }
-
-    function upOne(e) {
-      x1 = e.screenX;
-      if (x1 < x0) {
-        projectOne.style.cssText =
-          "transform: translateX(-100vw); transition: all 1s ease-out;";
-        projectTwo.style.cssText = "transform: translateX(100);";
-        setTimeout(function () {
-          projectTwo.style.cssText =
-            "transform: translateX(0); transition: all 1.5s ease-out;";
-        }, 100);
-      } else {
-        projectOne.style.cssText =
-          "transform: translateX(100vw); transition: all 1s ease-out;";
-        projectTwo.style.cssText = "transform: translateX(-100vw);";
-        setTimeout(function () {
-          projectTwo.style.cssText =
-            "transform: translateX(0); transition: all 1.5s ease-out;";
-        }, 100);
-      }
-      x0 = null;
-    }
-    // Project two swipe movement
-    projectTwo.addEventListener("mousedown", downTwo, false);
-    projectTwo.addEventListener("mouseup", upTwo, false);
-    projectTwo.addEventListener("mousemove", dragTwo, false);
-
-    let x20 = null;
-    let x21 = null;
-    let x2Cur = null;
-
-    function downTwo(e) {
-      x20 = e.screenX;
-    }
-
-    function dragTwo(e) {
-      x2Cur = e.screenX;
-      if (x20 !== null) {
-        projectTwo.style.cssText = `transform: translateX(${x2Cur - x20}px);`;
-      }
-    }
-
-    function upTwo(e) {
-      x21 = e.screenX;
-      if (x21 < x20) {
-        projectOne.style.cssText = "transform: translateX(100vw);";
-        setTimeout(function () {
-          projectOne.style.cssText =
-            "transform: translateX(0); transition: all 1.5s ease-out;";
-        }, 100);
-        projectTwo.style.cssText =
-          "transform: translateX(-100vw); transition: all 1.5s ease-out;";
-      } else {
-        projectOne.style.cssText = "transform: translateX(-100vw);";
-        setTimeout(function () {
-          projectOne.style.cssText =
-            "transform: translateX(0); transition: all 1.5s ease-out;";
-        }, 100);
-        projectTwo.style.cssText =
-          "transform: translateX(100vw); transition: all 1s ease-out;";
-      }
-      x20 = null;
-    }
 
     function moveOrder(direction) {
       if (direction === "next") {

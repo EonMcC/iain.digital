@@ -14,6 +14,7 @@ if (document.documentElement.clientWidth < 1000) {
 
     let currentProjectArray = superProjectArray;
 
+    const projectOneWrapper = document.getElementById("project-one-wrapper");
     const projectTwoWrapper = document.getElementById("project-two-wrapper");
 
     const backBtnMobile = document.querySelector(".back-btn-mobile");
@@ -28,10 +29,23 @@ if (document.documentElement.clientWidth < 1000) {
     backBtnTextMobile.addEventListener("touchend", back, false);
     nextBtnTextMobile.addEventListener("touchend", next, false);
 
+    const blobSuper = document.getElementById("blob-super");
+    const blobSuperLeft = blobSuper.getBoundingClientRect().left;
+
+    const blobSuperTopOffset =
+      blobSuper.getBoundingClientRect().top + pageYOffset;
+
     const blobZero = document.getElementById("blob-zero");
-    blobZeroSuperDimensions =
-      "width: 343.36px; height: 184.68; transition: all 1s;";
-    blobZeroCodingDimensions = `transform: translateY(15px) rotate(-5deg); width: 129.8px; height: 225px; transition: all 1s;`;
+    blobZero.style.cssText = `position: absolute; top: ${blobSuperTopOffset}px; left: ${
+      blobSuperLeft + 10
+    }px`;
+
+    blobZeroSuperDimensions = `position: absolute; top: ${blobSuperTopOffset}px; left: ${
+      blobSuperLeft + 10
+    }px; width: 343.36px; height: 184.68px; transition: all 1s;`;
+    blobZeroCodingDimensions = `left: 30%; top: ${
+      blobSuperTopOffset - 20
+    }px; width: 129.8px; height: 225px; transition: all 1s;`;
 
     function next() {
       const firstArray = currentProjectArray;
@@ -58,7 +72,8 @@ if (document.documentElement.clientWidth < 1000) {
       }
 
       currentProjectArray.forEach((object) => {
-        object.style.cssText = "transform: translate(100vw); opacity: 1;";
+        object.style.cssText =
+          "transform: translate(100vw); opacity: 1; z-index: 10;";
       });
 
       setTimeout(function () {

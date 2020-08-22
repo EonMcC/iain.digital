@@ -80,7 +80,7 @@ body {
   animation: breath 2s alternate infinite;
   cursor: pointer;
   padding: 10px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .back-arrow {
