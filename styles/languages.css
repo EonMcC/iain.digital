@@ -100,7 +100,8 @@
 
   #blob-two {
     position: absolute;
-    left: -1vw;
+    /* left: -1vw; */
+    right: calc(100vw - 290px);
     width: 90vw;
     height: 70px;
     border-radius: 5px;
