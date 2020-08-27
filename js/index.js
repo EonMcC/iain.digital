@@ -269,11 +269,6 @@ if (document.documentElement.clientWidth > 1000) {
   transform: rotate(0);
   animation: first-circle-transition 1s;
   transition: all 2s;
-  background: linear-gradient(
-    -135deg,
-    rgba(104, 137, 150, 1) 0%,
-    rgba(67, 115, 141, 1) 70%  
-  );
   box-shadow: -10px 10px 10px 5px var(--shadow);`;
   }
 
@@ -298,11 +293,6 @@ if (document.documentElement.clientWidth > 1000) {
     border-radius: 50px;
     transition: all 1.5s;
     transform: rotate(90deg);
-    background: linear-gradient(
-      135deg,
-      rgba(67, 115, 141, 1) 100%,
-      rgba(104, 137, 150, 1) 0%    
-    );
     box-shadow: 10px 10px 10px 5px var(--shadow);
    `;
   }
@@ -317,11 +307,6 @@ if (document.documentElement.clientWidth > 1000) {
   transform: rotate(0);
   animation: first-circle-transition 1s;
   transition: all 2s;
-  background: linear-gradient(
-    -135deg,
-    rgba(104, 137, 150, 1) 0%,
-    rgba(67, 115, 141, 1) 100%  
-  );
   box-shadow: -10px 10px 10px 5px var(--shadow);`;
   }
 }
