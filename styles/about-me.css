@@ -26,14 +26,14 @@
   color: var(--background);
   margin-left: 212px;
   z-index: 1;
-  font-weight: 200;
+  font-family: var(--header);
 }
 
 #hello {
   width: 583px;
   font-size: var(--font-size);
   line-height: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   color: #ffffff;
   align-self: center;
   margin: 0 20px;

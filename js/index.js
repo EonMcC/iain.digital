@@ -73,7 +73,7 @@ if (document.documentElement.clientWidth > 1000) {
       downArrowBottom.getBoundingClientRect().top + pageYOffset;
 
     const arrowBreakPoint = document
-      .querySelector("#sub-heading")
+      .querySelector(".heading-svg")
       .getBoundingClientRect().top;
 
     const superTrumpsImage = document.querySelector("#super-trumps-image");

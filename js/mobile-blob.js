@@ -91,7 +91,7 @@ if (document.documentElement.clientWidth < 1000) {
       top: ${y}px;
       width: 400px;
       height: 600px;
-      border-radius: 50px;
+      border-radius: 10px;
       transition: all 2s;
 
       background: var(--linGrad);

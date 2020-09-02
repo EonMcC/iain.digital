@@ -26,7 +26,7 @@
   line-height: 570px;
   letter-spacing: 5px;
   z-index: 1;
-  font-weight: 200;
+  font-family: var(--header);
 }
 
 #javascript {
@@ -100,12 +100,11 @@
 
   #blob-two {
     position: absolute;
-    /* left: -1vw; */
-    right: calc(100vw - 290px);
+    right: calc(100vw - 300px);
     width: 90vw;
     height: 70px;
     border-radius: 5px;
-    top: 109px;
+    top: 104px;
     opacity: 0;
 
     background: linear-gradient(

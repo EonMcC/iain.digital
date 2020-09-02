@@ -4,7 +4,7 @@
   line-height: 55px;
   letter-spacing: 5px;
   color: #ffffff;
-  margin-top: 0;
+  margin: 10px 0px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -14,14 +14,13 @@
   font-size: var(--font-size);
   line-height: 30px;
   color: #ffffff;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   margin-bottom: 0;
 }
 
 #coding-log-github {
-  font-size: 14px;
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
   z-index: 10;
 }
 
@@ -51,6 +50,20 @@
     opacity: 1;
     position: relative;
   }
+
+  #coding-log-github {
+    color: var(--main);
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  #coding-log-github:hover {
+    color: var(--light);
+  }
+
+  #coding-log-github:active {
+    color: var(--dark);
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -61,5 +74,18 @@
     background-size: cover;
     opacity: 1;
     position: relative;
+  }
+  #coding-log-github {
+    color: var(--main);
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  #coding-log-github:hover {
+    color: var(--light);
+  }
+
+  #coding-log-github:active {
+    color: var(--dark);
   }
 }

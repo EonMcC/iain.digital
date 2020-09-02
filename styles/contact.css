@@ -50,11 +50,15 @@
   color: #202020;
 }
 .contact-details-links *:hover {
-  color: white;
+  color: var(--light);
+}
+.contact-details-links *:active {
+  color: var(--dark);
 }
 
 .contact-header {
   display: none;
+  font-family: var(--header);
 }
 
 @media (max-width: 1000px) {

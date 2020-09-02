@@ -9,6 +9,7 @@
     rgba(67, 115, 141, 1) 50%,
     rgb(8, 70, 95) 90%
   );
+  --header: "Gruppo", cursive;
 }
 
 @media (max-width: 1000px) {
@@ -16,17 +17,26 @@
     overflow-x: hidden;
     width: 100vw;
   }
+  .heading-svg {
+    width: 90vw;
+  }
 }
 
 @media (min-width: 1000px) {
   :root {
-    --font-size: 16px;
+    --font-size: 18px;
+  }
+  .heading-svg {
+    width: 50vw;
   }
 }
 
 @media (min-width: 1500px) {
   :root {
-    --font-size: 20px;
+    --font-size: 22px;
+  }
+  .heading-svg {
+    width: 50vw;
   }
 }
 #landing-page {
