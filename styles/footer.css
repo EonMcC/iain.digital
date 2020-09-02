@@ -24,12 +24,14 @@ footer > * {
 
 .footer-title {
   color: var(--main);
+  font-family: var(--header);
   font-size: 35px;
 }
 
 .colaborators {
   color: var(--main);
-  font-size: 14px;
+  font-family: var(--header);
+  font-size: 16px;
   margin: 25px 0px 5px 0px;
 }
 
@@ -49,8 +51,21 @@ footer > * {
   margin: 0px;
 }
 
-.links .footer-content {
+.footer-content a {
   text-decoration: line-through;
+  color: var(--light);
+  display: block;
+}
+.footer-content a:hover {
+  color: var(--main);
+}
+
+.old-site {
+  text-decoration: none !important;
+}
+
+.playground {
+  pointer-events: none;
 }
 
 @media (max-width: 1000px) {
@@ -64,7 +79,7 @@ footer > * {
   }
 
   .footer-title {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .info {

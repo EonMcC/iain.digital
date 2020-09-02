@@ -1,11 +1,10 @@
 #super-trumps {
-  width: 299px;
-  font-size: 50px;
+  font-size: 58px;
   line-height: 55px;
   letter-spacing: 5px;
   color: #ffffff;
-  margin: 10px 0px;
-  font-family: "Montserrat", sans-serif;
+  margin: 20px 0px;
+  font-family: var(--header);
 }
 
 #super-trumps-text {

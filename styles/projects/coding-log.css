@@ -1,12 +1,10 @@
 #coding-log {
-  width: 299px;
-  font-size: 50px;
+  font-size: 58px;
   line-height: 55px;
   letter-spacing: 5px;
   color: #ffffff;
   margin: 10px 0px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-family: var(--header);
 }
 
 #coding-log-text {

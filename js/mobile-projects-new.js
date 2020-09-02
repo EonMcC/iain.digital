@@ -97,7 +97,7 @@ if (document.documentElement.clientWidth < 1000) {
         console.log("here");
         firstArray.forEach((object) => {
           object.style.cssText =
-            "transform: translate(0vw); opacity: 0; z-index: -1; background: green;";
+            "transform: translate(0vw); opacity: 0; z-index: -1;";
         });
       }, 1000);
 
