@@ -43,8 +43,8 @@
   #coding-log-image {
     width: 100%;
     height: 357px;
-    background: url(../../images/coding-phones.png) no-repeat center;
-    background-size: cover;
+    background: url(../../images/coding-phones-small.png) no-repeat center;
+    background-size: contain;
     opacity: 1;
     position: relative;
   }
@@ -68,11 +68,16 @@
   #coding-log-image {
     width: 100%;
     height: 454.23px;
-    background: url(../../images/coding-phones.png) no-repeat center;
-    background-size: cover;
+    background: url(../../images/coding-phones-small.png) no-repeat center;
+    background-size: contain;
     opacity: 1;
     position: relative;
   }
+
+  #coding-log-text {
+    width: 400px;
+  }
+
   #coding-log-github {
     color: var(--main);
     text-decoration: none;

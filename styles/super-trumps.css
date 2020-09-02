@@ -26,12 +26,10 @@
   #super-trumps-image {
     width: 90%;
     height: 180px;
-    background: url(../../images/super-trumps2.png) no-repeat center;
-    background-size: cover;
+    background: url(../../images/super-trumps-mobile.png) no-repeat center;
+    background-size: contain;
     border-radius: 10px;
     opacity: 1;
-    box-shadow: 5px 5px 5px 5px var(--shadow);
-    /* transform: rotate(9.85deg); */
     overflow: visible;
     opacity: 1;
   }
@@ -132,6 +130,10 @@
     box-shadow: 5px 5px 5px 5px var(--shadow);
     bottom: -300px;
     border-radius: 10px;
+  }
+
+  #super-trumps-text {
+    width: 400px;
   }
 
   #super-trumps-github {
