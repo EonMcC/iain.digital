@@ -8,7 +8,7 @@ if (document.documentElement.clientWidth < 1000) {
     const codingLog = document.getElementById("coding-log");
     const codingLogText = document.getElementById("coding-log-text");
     const codingLogImage = document.getElementById("coding-log-image");
-    // const codingLogImageWidth = codingLogImage.offsetWidth;
+
     const codingLogImageHeight = codingLogImage.offsetHeight;
     const codingProjectArray = [codingLog, codingLogText, codingLogImage];
 
@@ -51,10 +51,10 @@ if (document.documentElement.clientWidth < 1000) {
       const firstArray = currentProjectArray;
       firstArray.forEach((object) => {
         object.style.cssText =
-          "transform: translate(-100vw); opacity: 1; z-index: 10; transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
+          "transform: translate(-100vw); opacity: 1; z-index: 0; transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
       });
 
-      projectTwoWrapper.style.cssText = "opacity: 1;";
+      projectTwoWrapper.style.cssText = "opacity: 1";
 
       setTimeout(function () {
         firstArray.forEach((object) => {
@@ -79,7 +79,7 @@ if (document.documentElement.clientWidth < 1000) {
       setTimeout(function () {
         currentProjectArray.forEach((object) => {
           object.style.cssText =
-            "transform: translate(0vw); opacity: 1; z-index: 10;  transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
+            "transform: translate(0vw); opacity: 1; z-index: 0;  transition: all 1s cubic-bezier(.41,-0.29,.24,.99);";
         });
       }, 200);
     }

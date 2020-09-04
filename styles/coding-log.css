@@ -14,12 +14,14 @@
   color: #ffffff;
   letter-spacing: 0px;
   margin-bottom: 0;
+  z-index: 110;
 }
 
 #coding-log-github {
-  color: #ffffff;
+  position: relative;
+  color: var(--main);
   text-decoration: none;
-  z-index: 10;
+  z-index: 110;
 }
 
 @media (max-width: 1000px) {
