@@ -150,15 +150,15 @@ body {
   }
 
   #el-to-move {
-    opacity: 1;
+    display: block;
+    width: 343.36px;
+    height: 184.68px;
     position: absolute;
-    width: 863px;
-    height: 570px;
-    left: -489px;
-    top: 29px;
+    z-index: -1;
+    border-radius: 10px;
+    transform: rotate(-5deg);
 
     background: var(--linGrad);
-    border-radius: 285px;
-    box-shadow: 10px 10px 10px 5px var(--shadow);
+    box-shadow: -10px 10px 10px 5px var(--shadow);
   }
 }

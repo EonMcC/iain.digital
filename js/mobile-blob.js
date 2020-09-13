@@ -2,6 +2,14 @@ if (document.documentElement.clientWidth < 1000) {
   document.addEventListener("DOMContentLoaded", () => {
     const elToMove = document.getElementById("el-to-move");
 
+    const minusOneEl = document.getElementById("blob-super");
+    const minusOnePosX = minusOneEl.getBoundingClientRect().left + 7;
+    const minusOnePosY = minusOneEl.getBoundingClientRect().top + pageYOffset;
+
+    const zeroEl = document.getElementById("coding-log-image");
+    const zeroPosX = zeroEl.getBoundingClientRect().left;
+    const zeroPosY = zeroEl.getBoundingClientRect().top + pageYOffset;
+
     const firstEl = document.getElementById("blob");
     const firstPosX = firstEl.getBoundingClientRect().left;
     const firstPosY = firstEl.getBoundingClientRect().top + pageYOffset;
@@ -14,6 +22,10 @@ if (document.documentElement.clientWidth < 1000) {
     const thirdPosX = thirdEl.getBoundingClientRect().left;
     const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
+    const minusOneTriggerPos =
+      document.getElementById("super-trumps-image").getBoundingClientRect()
+        .top + 75;
+
     const firstTriggerPos = document
       .getElementById("hello")
       .getBoundingClientRect().top;
@@ -21,8 +33,25 @@ if (document.documentElement.clientWidth < 1000) {
       .getElementById("indv-languages-wrapper")
       .getBoundingClientRect().top;
 
+    window.addEventListener("scroll", readyMinusOneMove);
     window.addEventListener("scroll", readyFirstMove);
     window.addEventListener("scroll", readySecondMove);
+
+    //minusOneMove
+    function readyMinusOneMove() {
+      if (pageYOffset > minusOneTriggerPos) {
+        window.removeEventListener("scroll", readyMinusOneMove);
+        window.addEventListener("scroll", reverseReadyMinusOneMove);
+        minusOneMove(elToMove, zeroPosX, zeroPosY);
+      }
+    }
+    function reverseReadyMinusOneMove() {
+      if (pageYOffset < minusOneTriggerPos) {
+        window.removeEventListener("scroll", reverseReadyMinusOneMove);
+        window.addEventListener("scroll", readyMinusOneMove);
+        reverseMinusOneMove(elToMove, minusOnePosX, minusOnePosY);
+      }
+    }
 
     //First Move
     function readyFirstMove() {
@@ -57,7 +86,26 @@ if (document.documentElement.clientWidth < 1000) {
       }
     }
 
-    elToMove.style.cssText = `left: ${firstPosX}px; top: ${firstPosY}px;`;
+    elToMove.style.cssText = `left: ${minusOnePosX}px; top: ${minusOnePosY}px;`;
+
+    function minusOneMove(elToMove, x, y) {
+      elToMove.style.cssText = `
+        left: 30%;
+        top: ${y}px;
+        width: 129.8px;
+        height: 225px;
+        transition: all 2s;
+      `;
+    }
+    function reverseMinusOneMove(elToMove, x, y) {
+      elToMove.style.cssText = `
+      left: ${x}px;
+      top: ${y}px;
+      width: 343.36px;
+      height: 184.68px;
+      transition: all 2s;
+      `;
+    }
 
     function firstMove(elToMove, x, y) {
       elToMove.style.cssText = `
