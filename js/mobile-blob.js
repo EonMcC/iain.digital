@@ -26,6 +26,10 @@ if (document.documentElement.clientWidth < 1000) {
       document.getElementById("super-trumps-image").getBoundingClientRect()
         .top + 75;
 
+    const zeroTriggerPos =
+      document.getElementById("coding-log-image").getBoundingClientRect().top +
+      75;
+
     const firstTriggerPos = document
       .getElementById("hello")
       .getBoundingClientRect().top;
@@ -34,10 +38,11 @@ if (document.documentElement.clientWidth < 1000) {
       .getBoundingClientRect().top;
 
     window.addEventListener("scroll", readyMinusOneMove);
+    window.addEventListener("scroll", readyZeroMove);
     window.addEventListener("scroll", readyFirstMove);
     window.addEventListener("scroll", readySecondMove);
 
-    //minusOneMove
+    // minusOneMove
     function readyMinusOneMove() {
       if (pageYOffset > minusOneTriggerPos) {
         window.removeEventListener("scroll", readyMinusOneMove);
@@ -50,6 +55,21 @@ if (document.documentElement.clientWidth < 1000) {
         window.removeEventListener("scroll", reverseReadyMinusOneMove);
         window.addEventListener("scroll", readyMinusOneMove);
         reverseMinusOneMove(elToMove, minusOnePosX, minusOnePosY);
+      }
+    }
+    // Zero Move
+    function readyZeroMove() {
+      if (pageYOffset > zeroTriggerPos) {
+        window.removeEventListener("scroll", readyZeroMove);
+        window.addEventListener("scroll", reverseReadyZeroMove);
+        zeroMove(elToMove, firstPosX, firstPosY);
+      }
+    }
+    function reverseReadyZeroMove() {
+      if (pageYOffset < zeroTriggerPos) {
+        window.removeEventListener("scroll", reverseReadyZeroMove);
+        window.addEventListener("scroll", readyZeroMove);
+        reverseZeroMove(elToMove, zeroPosX, zeroPosY);
       }
     }
 
@@ -107,6 +127,27 @@ if (document.documentElement.clientWidth < 1000) {
       `;
     }
 
+    function zeroMove(elToMove, x, y) {
+      elToMove.style.cssText = `
+        left: ${x}px;
+        top: ${y}px;
+        width: 863px;
+        height: 570px;
+        transition: all 2s;
+        transform: rotate(0deg);
+        border-radius: 285px;
+      `;
+    }
+    function reverseZeroMove(elToMove, x, y) {
+      elToMove.style.cssText = `
+      left: 30%;
+      top: ${y}px;
+      width: 129.8px;
+      height: 225px;
+      transition: all 2s;
+      `;
+    }
+
     function firstMove(elToMove, x, y) {
       elToMove.style.cssText = `
       left: ${x}px;
@@ -116,6 +157,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 5px;
       transition: all 2s;
 
+      transform: rotate(0deg);
       background: var(--linGrad);
       box-shadow: -10px 10px 10px 5px var(--shadow);`;
     }
@@ -129,6 +171,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 285px;
       transition: all 2s;
       
+      transform: rotate(0deg);
       background: var(--linGrad);
       box-shadow: 10px 10px 10px 5px var(--shadow);`;
     }
@@ -142,6 +185,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 10px;
       transition: all 2s;
 
+      transform: rotate(0deg);
       background: var(--linGrad);
       box-shadow: -10px 10px 10px 5px var(--shadow);`;
     }
@@ -155,6 +199,7 @@ if (document.documentElement.clientWidth < 1000) {
       border-radius: 5px;
       transition: all 2s;
       
+      transform: rotate(0deg);
       background: var(--linGrad);
       box-shadow: 10px 10px 10px 5px var(--shadow);`;
     }
