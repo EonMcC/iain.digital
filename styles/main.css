@@ -88,7 +88,6 @@ body {
   fill: var(--main);
   position: absolute;
   animation: breath 2s alternate infinite;
-  cursor: pointer;
   padding: 10px;
   z-index: 100;
 }

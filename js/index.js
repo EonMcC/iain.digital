@@ -1,91 +1,12 @@
 if (document.documentElement.clientWidth > 1000) {
   document.addEventListener("DOMContentLoaded", () => {
-    const projectOne = document.getElementById("project-one-wrapper");
-    const projectTwo = document.getElementById("project-two-wrapper");
-
-    projectCurShowing = "projectOne";
-
-    function moveOrder(direction) {
-      if (direction === "next") {
-        if (projectCurShowing === "projectOne") {
-          projectOne.style.cssText =
-            "transform: translateX(-100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99); ";
-          projectTwo.style.cssText =
-            "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          projectCurShowing = "projectTwo";
-        } else {
-          projectOne.style.cssText = "transform: translateX(100vw);";
-          setTimeout(function () {
-            projectOne.style.cssText =
-              "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          }, 100);
-          projectTwo.style.cssText =
-            "transform: translateX(-100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          setTimeout(function () {
-            projectTwo.style.cssText = "transform: translateX(100vw);";
-          }, 1500);
-          projectCurShowing = "projectOne";
-        }
-      } else {
-        if (projectCurShowing === "projectOne") {
-          projectOne.style.cssText =
-            "transform: translateX(100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          projectTwo.style.cssText = "transform: translateX(-100vw);";
-          setTimeout(function () {
-            projectTwo.style.cssText =
-              "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          }, 100);
-          projectCurShowing = "projectTwo";
-        } else {
-          projectOne.style.cssText = "transform: translateX(-100vw);";
-          setTimeout(function () {
-            projectOne.style.cssText =
-              "transform: translateX(0); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          }, 100);
-          projectTwo.style.cssText =
-            "transform: translateX(100vw); transition: all 1.5s cubic-bezier(.41,-0.29,.24,.99);";
-          projectCurShowing = "projectOne";
-        }
-      }
-    }
-
-    const nextButton = document.querySelector(".next-arrow");
-    nextButton.addEventListener("click", nextFn);
-    function nextFn() {
-      moveOrder("next");
-    }
-
-    const previousButton = document.querySelector(".back-arrow");
-    previousButton.addEventListener("click", previousFn);
-
-    function previousFn() {
-      moveOrder("previous");
-    }
-
-    const downArrowTop = document.querySelector(".back-arrow");
-    const firstArrowPosX = downArrowTop.getBoundingClientRect().left;
-    const firstArrowPosY =
-      downArrowTop.getBoundingClientRect().top + pageYOffset;
-
-    const downArrowBottom = document.querySelector(".next-arrow");
-    const secondArrowPosX = downArrowBottom.getBoundingClientRect().left;
-    const secondArrowPosY =
-      downArrowBottom.getBoundingClientRect().top + pageYOffset;
+    const arrows = document.querySelectorAll(".scroll-arrows");
 
     const arrowBreakPoint = document
       .querySelector(".heading-svg")
       .getBoundingClientRect().top;
 
     const superTrumpsImage = document.querySelector("#super-trumps-image");
-    const codinglogImage = document.querySelector("#coding-log-image");
-
-    const backArrows = document.querySelector(".back-arrows");
-    const backArrowsPosX = backArrows.getBoundingClientRect().left;
-    const backArrowsPosY = backArrows.getBoundingClientRect().top + pageYOffset;
-
-    const nextArrows = document.querySelector(".next-arrows");
-    const nextArrowsPosX = nextArrows.getBoundingClientRect().left;
-    const nextArrowsPosY = nextArrows.getBoundingClientRect().top + pageYOffset;
 
     const firstEl = document.getElementById("blob");
     const firstPosX = firstEl.getBoundingClientRect().left;
@@ -106,42 +27,26 @@ if (document.documentElement.clientWidth > 1000) {
     const fourthPosX = fourthEl.getBoundingClientRect().left - 22;
     const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset;
 
-    window.addEventListener("scroll", readyArrowMove);
-    window.addEventListener("scroll", readyFadeImage);
+    window.addEventListener("scroll", readyArrowAndImage);
     window.addEventListener("scroll", readySecondMove);
     window.addEventListener("scroll", readyThirdMove);
 
     const firstTrigger = document.getElementById("super-trumps");
     const firstTriggerPos = firstTrigger.getBoundingClientRect().top;
 
-    function readyArrowMove() {
+    function readyArrowAndImage() {
+      console.log("here");
       if (pageYOffset > arrowBreakPoint) {
-        window.removeEventListener("scroll", readyArrowMove);
-        window.addEventListener("scroll", readyReverseArrowMove);
-        arrowMoveTop(
-          downArrowTop,
-          backArrowsPosX,
-          backArrowsPosY,
-          superTrumpsImage
-        );
-        arrowMoveBottom(downArrowBottom, nextArrowsPosX, nextArrowsPosY);
+        window.removeEventListener("scroll", readyArrowAndImage);
+        window.addEventListener("scroll", readyReverseArrowAndImage);
+        arrowAndImage(superTrumpsImage, arrows);
       }
     }
-    function readyReverseArrowMove() {
+    function readyReverseArrowAndImage() {
       if (pageYOffset < arrowBreakPoint) {
-        window.removeEventListener("scroll", readyReverseArrowMove);
-        window.addEventListener("scroll", readyArrowMove);
-        reverseArrowMoveTop(
-          downArrowTop,
-          firstArrowPosX,
-          firstArrowPosY,
-          superTrumpsImage
-        );
-        reverseArrowMoveBottom(
-          downArrowBottom,
-          secondArrowPosX,
-          secondArrowPosY
-        );
+        window.removeEventListener("scroll", readyReverseArrowAndImage);
+        window.addEventListener("scroll", readyArrowAndImage);
+        reverseArrowAndImage(superTrumpsImage, arrows);
       }
     }
 
@@ -149,14 +54,14 @@ if (document.documentElement.clientWidth > 1000) {
       if (pageYOffset > firstTriggerPos) {
         window.removeEventListener("scroll", readyFadeImage);
         window.addEventListener("scroll", reverseReadyFadeImage);
-        fadeImage(superTrumpsImage, codinglogImage);
+        fadeImage(superTrumpsImage);
       }
     }
     function reverseReadyFadeImage() {
       if (pageYOffset < firstTriggerPos) {
         window.removeEventListener("scroll", reverseReadyFadeImage);
         window.addEventListener("scroll", readyFadeImage);
-        reverseFadeImage(superTrumpsImage, codinglogImage);
+        reverseFadeImage(superTrumpsImage);
       }
     }
 
@@ -199,64 +104,29 @@ if (document.documentElement.clientWidth > 1000) {
     }
   });
 
-  function getOffset(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-      left: rect.left + window.scrollX,
-      top: rect.top + window.scrollY,
-    };
-  }
-
-  function arrowMoveTop(arrowToMove, x, y, superTrumpsImage) {
+  function arrowAndImage(superTrumpsImage, arrows) {
+    console.log("arrows", arrows);
     superTrumpsImage.style.cssText =
       "opacity: 1; transition: opacity 2s ease-in-out; ";
-    arrowToMove.style.cssText = `
-    left: calc(${x}px - 50px);
-    top: ${y}px;
-    
-    transform: rotate(90deg);
-    transition: all 2s
-    `;
+    arrows.forEach((el) => {
+      el.style.cssText = "opacity: 0; transition: opacity 2s ease-in-out; ";
+    });
   }
-  function reverseArrowMoveTop(arrowToMove, x, y, superTrumpsImage) {
+  function reverseArrowAndImage(superTrumpsImage, arrows) {
     superTrumpsImage.style.cssText =
       "opacity: 0; transition: opacity 2s ease-in-out; ";
-    arrowToMove.style.cssText = `
-  left: ${x}px;
-  top: ${y}px;
-  fill: var(--main);
-  transform: rotate(0deg);
-  transition: all 2s`;
+    arrows.forEach((el) => {
+      el.style.cssText = "opacity: 1; transition: opacity 2s ease-in-out; ";
+    });
   }
 
-  function arrowMoveBottom(arrowToMove, x, y) {
-    arrowToMove.style.cssText = `
-    left: calc(${x}px - 50px);
-    top: ${y}px;
-    
-    transform: rotate(-90deg);
-    transition: all 2s`;
-  }
-  function reverseArrowMoveBottom(arrowToMove, x, y) {
-    arrowToMove.style.cssText = `
-  left: ${x}px;
-  top: ${y}px;
-  fill: var(--main);
-  transform: rotate(0deg);
-  transition: all 2s`;
-  }
-
-  function fadeImage(superTrumpsImage, codinglogImage) {
+  function fadeImage(superTrumpsImage) {
     superTrumpsImage.style.cssText = `
     opacity: 0;
     transition: all 1.5s`;
-    codinglogImage.style.cssText = `
-    opacity: 0;
-    transition: all 1.5s`;
   }
-  function reverseFadeImage(superTrumsImage, codinglogImage) {
+  function reverseFadeImage(superTrumsImage) {
     superTrumsImage.style.cssText = `opacity: 1; transition: all 1.5s`;
-    codinglogImage.style.cssText = `opacity: 1; transition: all 1.5s`;
   }
 
   function secondMove(elToMove, x, y) {
