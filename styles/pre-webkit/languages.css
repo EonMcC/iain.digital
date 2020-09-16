@@ -1,35 +1,21 @@
 #languages-section {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 #indv-languages-wrapper {
   width: 67%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   z-index: 1;
 }
 
 #languages-heading-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   width: 33%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -43,60 +29,37 @@
 }
 
 #javascript {
-  -webkit-animation: accumulator 5s 0s infinite alternate;
   animation: accumulator 5s 0s infinite alternate;
 }
 #angular {
-  -webkit-animation: accumulator 5s 0.5s infinite alternate;
   animation: accumulator 5s 0.5s infinite alternate;
 }
 #sinatra {
-  -webkit-animation: accumulator 5s 1s infinite alternate;
   animation: accumulator 5s 1s infinite alternate;
 }
 #figma {
-  -webkit-animation: accumulator 5s 1.5s infinite alternate;
   animation: accumulator 5s 1.5s infinite alternate;
 }
 #ruby {
-  -webkit-animation: accumulator 5s 2s infinite alternate;
   animation: accumulator 5s 2s infinite alternate;
 }
 #css {
-  -webkit-animation: accumulator 5s 2.5s infinite alternate;
   animation: accumulator 5s 2.5s infinite alternate;
 }
 #html {
-  -webkit-animation: accumulator 5s 3s infinite alternate;
   animation: accumulator 5s 3s infinite alternate;
 }
 #java {
-  -webkit-animation: accumulator 5s 3.5s infinite alternate;
   animation: accumulator 5s 3.5s infinite alternate;
 }
 #react {
-  -webkit-animation: accumulator 5s 4s infinite alternate;
   animation: accumulator 5s 4s infinite alternate;
 }
 #english {
-  -webkit-animation: accumulator 5s 4.5s infinite alternate;
   animation: accumulator 5s 4.5s infinite alternate;
 }
 #german {
-  -webkit-animation: accumulator 5s 5s infinite alternate;
   animation: accumulator 5s 5s infinite alternate;
-}
-
-@-webkit-keyframes accumulator {
-  0% {
-    fill: #496777;
-  }
-  50% {
-    fill: #78a9c3;
-  }
-  100% {
-    fill: white;
-  }
 }
 
 @keyframes accumulator {
@@ -116,12 +79,7 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -148,18 +106,11 @@
     top: 104px;
     opacity: 0;
 
-    background: -o-linear-gradient(
-      225deg,
-      rgba(67, 115, 141, 1) 100%,
-      rgba(104, 137, 150, 1) 0%
-    );
-
     background: linear-gradient(
       -135deg,
       rgba(67, 115, 141, 1) 100%,
       rgba(104, 137, 150, 1) 0%
     );
-    -webkit-box-shadow: -10px 10px 10px 5px var(--shadow);
     box-shadow: -10px 10px 10px 5px var(--shadow);
   }
 }

@@ -83,7 +83,6 @@ body {
   height: 53px;
   fill: var(--main);
   position: absolute;
-  -webkit-animation: breath 2s alternate infinite;
   animation: breath 2s alternate infinite;
   padding: 10px;
   z-index: 100;
@@ -96,15 +95,6 @@ body {
 .next-arrow {
   top: calc(100% - 70px);
   left: calc(50vw - 62.5px);
-}
-
-@-webkit-keyframes breath {
-  0% {
-    fill: var(--main);
-  }
-  100% {
-    fill: #4967773b;
-  }
 }
 
 @keyframes breath {
@@ -124,7 +114,6 @@ body {
   height: 370px;
   background: var(--linGrad);
   border-radius: 50px;
-  -webkit-box-shadow: 10px 10px 10px 5px var(--shadow);
   box-shadow: 10px 10px 10px 5px var(--shadow);
 }
 
@@ -157,12 +146,9 @@ body {
     position: absolute;
     z-index: -1;
     border-radius: 10px;
-    -webkit-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
     transform: rotate(-5deg);
 
     background: var(--linGrad);
-    -webkit-box-shadow: -10px 10px 10px 5px var(--shadow);
     box-shadow: -10px 10px 10px 5px var(--shadow);
   }
 }

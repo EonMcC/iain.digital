@@ -1,0 +1,96 @@
+#coding-log {
+  font-size: 58px;
+  line-height: 55px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  margin: 10px 0px;
+  font-family: var(--header);
+}
+
+#coding-log-text {
+  width: 302px;
+  font-size: var(--font-size);
+  line-height: 30px;
+  color: #ffffff;
+  letter-spacing: 0px;
+  margin-bottom: 0;
+  z-index: 110;
+}
+
+#coding-log-github {
+  position: relative;
+  color: var(--main);
+  text-decoration: none;
+  z-index: 110;
+}
+
+@media (max-width: 1000px) {
+  #coding-log-image {
+    width: 100%;
+    height: 250px;
+    background: url(../../images/coding-log-phone2.png) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  #coding-log {
+    margin: 0 0 0.1em 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #coding-log-image {
+    width: 100%;
+    height: 357px;
+    background: url(../../images/coding-phones-small.png) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    position: relative;
+  }
+
+  #coding-log-github {
+    color: var(--main);
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  #coding-log-github:hover {
+    color: var(--light);
+  }
+
+  #coding-log-github:active {
+    color: var(--dark);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #coding-log-image {
+    width: 100%;
+    height: 454.23px;
+    background: url(../../images/coding-phones-small.png) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    position: relative;
+  }
+
+  #coding-log-text {
+    width: 400px;
+  }
+
+  #coding-log-github {
+    color: var(--main);
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  #coding-log-github:hover {
+    color: var(--light);
+  }
+
+  #coding-log-github:active {
+    color: var(--dark);
+  }
+}
