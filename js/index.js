@@ -35,7 +35,6 @@ if (document.documentElement.clientWidth > 1000) {
     const firstTriggerPos = firstTrigger.getBoundingClientRect().top;
 
     function readyArrowAndImage() {
-      console.log("here");
       if (pageYOffset > arrowBreakPoint) {
         window.removeEventListener("scroll", readyArrowAndImage);
         window.addEventListener("scroll", readyReverseArrowAndImage);
@@ -105,7 +104,6 @@ if (document.documentElement.clientWidth > 1000) {
   });
 
   function arrowAndImage(superTrumpsImage, arrows) {
-    console.log("arrows", arrows);
     superTrumpsImage.style.cssText =
       "opacity: 1; transition: opacity 2s ease-in-out; ";
     arrows.forEach((el) => {
