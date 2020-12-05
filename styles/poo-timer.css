@@ -1,0 +1,96 @@
+#poo-timer {
+  font-size: 58px;
+  line-height: 55px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  margin: 10px 0px;
+  font-family: var(--header);
+}
+
+#poo-timer-text {
+  width: 302px;
+  font-size: var(--font-size);
+  line-height: 30px;
+  color: #ffffff;
+  letter-spacing: 0px;
+  margin-bottom: 0;
+  z-index: 110;
+}
+
+#poo-timer-playstore {
+  position: relative;
+  color: var(--main);
+  text-decoration: none;
+  z-index: 110;
+}
+
+@media (max-width: 1000px) {
+  #poo-timer-image {
+    width: 100%;
+    height: 250px;
+    background: url(../../images/poo-timer-phone.png) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  #poo-timer {
+    margin: 0 0 0.1em 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #poo-timer-image {
+    width: 100%;
+    height: 357px;
+    background: url(../../images/poo-timer-phones.png) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    position: relative;
+  }
+
+  #poo-timer-playstore {
+    color: var(--main);
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  #poo-timer-playstore:hover {
+    color: var(--light);
+  }
+
+  #poo-timer-playstore:active {
+    color: var(--dark);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #poo-timer-image {
+    width: 100%;
+    height: 454.23px;
+    background: url(../../images/poo-timer-phones.png) no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    position: relative;
+  }
+
+  #poo-timer-text {
+    width: 400px;
+  }
+
+  #poo-timer-playstore {
+    color: var(--main);
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  #poo-timer-playstore:hover {
+    color: var(--light);
+  }
+
+  #poo-timer-playstore:active {
+    color: var(--dark);
+  }
+}
