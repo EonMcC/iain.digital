@@ -28,7 +28,7 @@
   #coding-log-image {
     width: 100%;
     height: 250px;
-    background: url(../../images/coding-log-phone2.png) no-repeat center;
+    background: url(../../images/coding-log-phone.png) no-repeat center;
     background-size: contain;
     opacity: 1;
     position: relative;
@@ -45,7 +45,7 @@
   #coding-log-image {
     width: 100%;
     height: 357px;
-    background: url(../../images/coding-phones-small.png) no-repeat center;
+    background: url(../../images/coding-log-phones.png) no-repeat center;
     background-size: contain;
     opacity: 1;
     position: relative;
@@ -70,7 +70,7 @@
   #coding-log-image {
     width: 100%;
     height: 454.23px;
-    background: url(../../images/coding-phones-small.png) no-repeat center;
+    background: url(../../images/coding-log-phones.png) no-repeat center;
     background-size: contain;
     opacity: 1;
     position: relative;
