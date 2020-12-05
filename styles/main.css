@@ -20,7 +20,7 @@
 
 @media (min-width: 1000px) {
   :root {
-    --font-size: 18px;
+    --font-size: 16px;
   }
   .heading-svg {
     width: 50vw;
@@ -29,7 +29,7 @@
 
 @media (min-width: 1500px) {
   :root {
-    --font-size: 22px;
+    --font-size: 20px;
   }
   .heading-svg {
     width: 35vw;
@@ -50,8 +50,9 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: Avenir;
-  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 #heading-wrapper {
@@ -130,7 +131,7 @@ body {
 
 @media (max-width: 1000px) {
   :root {
-    --font-size: 14px;
+    --font-size: 12px;
   }
 
   #heading-wrapper {
