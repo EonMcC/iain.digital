@@ -153,8 +153,8 @@ body {
 
   #el-to-move {
     display: block;
-    width: 343.36px;
-    height: 184.68px;
+    width: 125px;
+    height: 225px;
     position: absolute;
     z-index: -1;
     border-radius: 10px;

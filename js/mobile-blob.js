@@ -6,6 +6,12 @@ if (document.documentElement.clientWidth < 1000) {
     const minusOnePosX = minusOneEl.getBoundingClientRect().left + 7;
     const minusOnePosY = minusOneEl.getBoundingClientRect().top + pageYOffset;
 
+    const pooTimerImg = document.getElementById("poo-timer-image");
+    const pooTimerImgPosX = pooTimerImg.getBoundingClientRect().left;
+    const pooTimerImgPosY = pooTimerImg.getBoundingClientRect().top + pageYOffset;
+    console.log(pooTimerImgPosX)
+    console.log(pooTimerImgPosY)
+
     const zeroEl = document.getElementById("coding-log-image");
     const zeroPosX = zeroEl.getBoundingClientRect().left;
     const zeroPosY = zeroEl.getBoundingClientRect().top + pageYOffset;
@@ -22,6 +28,9 @@ if (document.documentElement.clientWidth < 1000) {
     const thirdPosX = thirdEl.getBoundingClientRect().left;
     const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
+    const pooTimerTriggerPos =
+      document.getElementById("poo-timer-image").getBoundingClientRect().top + 75;
+
     const minusOneTriggerPos =
       document.getElementById("super-trumps-image").getBoundingClientRect()
         .top + 75;
@@ -37,11 +46,27 @@ if (document.documentElement.clientWidth < 1000) {
       .getElementById("indv-languages-wrapper")
       .getBoundingClientRect().top;
 
+    window.addEventListener("scroll", readyPooTimerMove);
     window.addEventListener("scroll", readyMinusOneMove);
     window.addEventListener("scroll", readyZeroMove);
     window.addEventListener("scroll", readyFirstMove);
     window.addEventListener("scroll", readySecondMove);
 
+    // Poo Timer Move
+    function readyPooTimerMove() {
+      if (pageYOffset > pooTimerTriggerPos) {
+        window.removeEventListener("scroll", readyPooTimerMove);
+        window.addEventListener("scroll", reverseReadyPooTimerMove);
+        pooTimerMove(elToMove, minusOnePosX, minusOnePosY);
+      }
+    }
+    function reverseReadyPooTimerMove() {
+      if (pageYOffset < pooTimerTriggerPos) {
+        window.removeEventListener("scroll", reverseReadyPooTimerMove);
+        window.addEventListener("scroll", readyPooTimerMove);
+        reversePooTimerMove(elToMove, pooTimerImgPosX, pooTimerImgPosY);
+      }
+    }
     // minusOneMove
     function readyMinusOneMove() {
       if (pageYOffset > minusOneTriggerPos) {
@@ -106,7 +131,26 @@ if (document.documentElement.clientWidth < 1000) {
       }
     }
 
-    elToMove.style.cssText = `left: ${minusOnePosX}px; top: ${minusOnePosY}px;`;
+    elToMove.style.cssText = `left: ${pooTimerImgPosX}px; top: ${pooTimerImgPosY}px;`;
+
+    function pooTimerMove(elToMove, x, y) {
+      elToMove.style.cssText = `
+        left: ${x}px;
+        top: ${y}px;
+        width: 343.36px;
+        height: 184.68px;
+        transition: all 2s;
+      `;
+    }
+    function reversePooTimerMove(elToMove, x, y) {
+      elToMove.style.cssText = `
+      left: ${x}px;
+      top: ${y}px;
+      width: 129.8px;
+      height: 225px;
+      transition: all 2s;
+      `;
+    }
 
     function minusOneMove(elToMove, x, y) {
       elToMove.style.cssText = `
