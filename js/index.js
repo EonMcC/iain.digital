@@ -23,9 +23,9 @@ if (document.documentElement.clientWidth > 1000) {
     const thirdPosX = thirdEl.getBoundingClientRect().left - 50;
     const thirdPosY = thirdEl.getBoundingClientRect().top + pageYOffset;
 
-    const fourthEl = document.getElementById("contact-details-container");
-    const fourthPosX = fourthEl.getBoundingClientRect().left - 22;
-    const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset;
+    const fourthEl = document.getElementById("contact-details-links");
+    const fourthPosX = fourthEl.getBoundingClientRect().left - 8;
+    const fourthPosY = fourthEl.getBoundingClientRect().top + pageYOffset - 20;
 
     window.addEventListener("scroll", readyArrowAndImage);
     window.addEventListener("scroll", readySecondMove);
@@ -160,7 +160,6 @@ if (document.documentElement.clientWidth > 1000) {
     height: 570px;
     border-radius: 50px;
     transition: all 1.5s;
-    transform: rotate(90deg);
     box-shadow: 10px 10px 10px 5px var(--shadow);
    `;
   }
@@ -172,7 +171,6 @@ if (document.documentElement.clientWidth > 1000) {
   width: 863px;
   height: 370px;
   border-radius: 50px;
-  transform: rotate(0);
   animation: first-circle-transition 1s;
   transition: all 2s;
   box-shadow: -10px 10px 10px 5px var(--shadow);`;
